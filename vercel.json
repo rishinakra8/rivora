@@ -1,9 +1,7 @@
 {
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/project/:id", "destination": "/frontend/project.html" },
-    { "source": "/project", "destination": "/frontend/project.html" },
-    { "source": "/", "destination": "/frontend/index.html" },
-    { "source": "/((?!api/).*)", "destination": "/frontend/$1" }
+    { "source": "/project/:id", "destination": "/project.html" },
+    { "source": "/project", "destination": "/project.html" }
   ]
 }
