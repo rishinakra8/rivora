@@ -8,13 +8,13 @@ const services = [
     num: "01",
     title: "architectural design",
     description: "Comprehensive architectural design from concept through execution-ready documentation — combining creative direction with technical precision on every drawing we issue.",
-    image: "images/services/architectural-design.png"
+    image: "images/services/architectural-design.jpg"
   },
   {
     num: "02",
     title: "interior design",
     description: "Curated interior environments built around how a space is actually lived in — spatial planning, material selection and lighting brought together with intent.",
-    image: "images/services/interior-design.png"
+    image: "images/services/interior-design.jpg"
   },
   {
     num: "03",
@@ -26,7 +26,7 @@ const services = [
     num: "04",
     title: "design-to-build execution",
     description: "One team carries a project from concept to on-site reality, with in-house coordination and site supervision at every stage of construction.",
-    image: "images/services/design-to-build-execution.png"
+    image: "images/services/design-to-build-execution.jpg"
   },
   {
     num: "05",
