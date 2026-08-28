@@ -27,10 +27,3 @@ Thumbs.db
 *.mkv
 
 # Oversized render exports (>100MB) — store in cloud
-frontend/images/projects/Renders/Exterior/Elevation 4/E1. Final R1.png
-frontend/images/projects/Renders/Exterior/Elevation 1/3.png
-frontend/images/projects/Renders/Exterior/Landscape/Scene 1.png
-frontend/images/projects/Renders/Exterior/Landscape/Scene 2.png
-frontend/images/projects/Renders/Exterior/Landscape/Scene 30.png
-frontend/images/projects/Renders/Exterior/Elevation 2/E1 Final R1.png
-frontend/images/projects/sesh sports and fitness/ELEVATION.png
