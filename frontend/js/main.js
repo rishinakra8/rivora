@@ -75,67 +75,76 @@ function renderServices(){
    ========================================================================= */
 const projects = [
   {
-    id: "sesh-sports-and-fitness",
-    title: "Sesh Sports N Fitness",
-    location: "Gurgaon, NCR",
-    category: "Commercial",
-    image: "images/projects/sesh sports and fitness/1.png",
-    size: "wide",
-    tag: "Flagship Project"
+    id:       'sesh-sports-and-fitness',
+    title:    'Sesh Sports N Fitness',
+    location: 'Gurgaon, NCR',
+    category: 'Commercial',
+    image:    'images/projects/sesh sports and fitness/1.png',
+    size:     'wide',
+    tag:      'Flagship Project'
   },
   {
-    id: "dheeraj-residence",
-    title: "Dheeraj Residence",
-    location: "Bestech, Gurgaon",
-    category: "Residential",
-    image: "images/projects/DHEERAJ RESIDENCE_ BESTECH/1.jpg",
-    size: "",
-    tag: "Residential"
+    id:       'dheeraj-residence',
+    title:    'Dheeraj Residence',
+    location: 'Bestech, Gurgaon',
+    category: 'Residential',
+    image:    'images/projects/DHEERAJ RESIDENCE_ BESTECH/1.jpg',
+    size:     '',
+    tag:      'Residential'
   },
   {
-    id: "spice-garden",
-    title: "Spice Garden",
-    location: "NCR, India",
-    category: "Hospitality",
-    image: "images/projects/SPICE GARDEN/RENDERS/render 1.png",
-    size: "wide",
-    tag: "Hospitality"
+    id:       'spice-garden',
+    title:    'Spice Garden',
+    location: 'NCR, India',
+    category: 'Hospitality',
+    image:    'images/projects/SPICE GARDEN/RENDERS/render 1.png',
+    size:     'wide',
+    tag:      'Hospitality'
   },
   {
-    id: "kunal-residence",
-    title: "Kunal Residence",
-    location: "Gurgaon, NCR",
-    category: "Residential",
-    image: "images/projects/KUNAL RESIDENCE/3D VIEW/1.png",
-    size: "tall",
-    tag: "Residential"
+    id:       'kunal-residence',
+    title:    'Kunal Residence',
+    location: 'Gurgaon, NCR',
+    category: 'Residential',
+    image:    'images/projects/KUNAL RESIDENCE/3D VIEW/1.png',
+    size:     'tall',
+    tag:      'Residential'
   },
   {
-    id: "luv-residence",
-    title: "Luv Residence",
-    location: "Gurgaon, NCR",
-    category: "Residential",
-    image: "images/projects/LUV RESIDENCE/3D VIEW/L2.png",
-    size: "",
-    tag: "Residential"
+    id:       'luv-residence',
+    title:    'Luv Residence',
+    location: 'Gurgaon, NCR',
+    category: 'Residential',
+    image:    'images/projects/LUV RESIDENCE/3D VIEW/L2.png',
+    size:     '',
+    tag:      'Residential'
   },
   {
-    id: "rinku-goyal-commercial",
-    title: "Commercial Complex",
-    location: "Bhiwadi, NCR",
-    category: "Commercial",
-    image: "images/projects/RINKU GOYAL_COMMERCIAL BHIWADI/E1.png",
-    size: "",
-    tag: "Commercial"
+    id:       'rinku-goyal-commercial',
+    title:    'Commercial Complex',
+    location: 'Bhiwadi, NCR',
+    category: 'Commercial',
+    image:    'images/projects/RINKU GOYAL_COMMERCIAL BHIWADI/E1.png',
+    size:     '',
+    tag:      'Commercial'
   },
   {
-    id: "naveen-residence",
-    title: "Naveen Residence",
-    location: "Gurgaon, NCR",
-    category: "Residential",
-    image: "images/projects/NAVEEN RESIDENCE/L1.png",
-    size: "",
-    tag: "Residential"
+    id:       'naveen-residence',
+    title:    'Naveen Residence',
+    location: 'Gurgaon, NCR',
+    category: 'Residential',
+    image:    'images/projects/NAVEEN RESIDENCE/L1.png',
+    size:     '',
+    tag:      'Residential'
+  },
+  {
+    id:       'renders',
+    title:    'Renders Portfolio',
+    location: 'NCR, India',
+    category: 'Residential',
+    image:    'images/projects/Renders/Exterior/Elevation 1/1.png',
+    size:     'wide',
+    tag:      'Visualisation'
   }
 ];
 
