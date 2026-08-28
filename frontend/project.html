@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Detail — Rivora Design Studio</title>
+<meta name="description" content="Explore luxury architectural design, turnkey interior fit-outs, and spatial execution by Rivora Design Studio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@400;500;600&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header id="siteHeader">
+  <div class="navwrap">
+    <a href="index.html" class="brandmark">
+      <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14 46V14h11c6 0 10 3.4 10 9 0 4.4-2.6 7.3-6.6 8.4L36 46" stroke="#B8925A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M25 31.4h-0.5" stroke="#B8925A" stroke-width="2" stroke-linecap="round"/>
+        <path d="M40 17c4-2.6 8-1.2 9.6 1.4" stroke="#B8925A" stroke-width="1.4" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-type">
+        <span class="r-name">RIVORA</span>
+        <span class="r-sub">Design Studio</span>
+      </span>
+    </a>
+    <nav class="links">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#work">Work</a>
+      <a href="index.html#ethos">Ethos</a>
+      <a href="index.html#process">Process</a>
+      <a href="index.html#studio">Studio</a>
+      <a href="index.html#careers">Careers</a>
+    </nav>
+    <a href="index.html#contact" class="nav-cta">Enquire</a>
+    <button class="burger" id="burgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#services">Services</a>
+  <a href="index.html#work">Work</a>
+  <a href="index.html#ethos">Ethos</a>
+  <a href="index.html#process">Process</a>
+  <a href="index.html#studio">Studio</a>
+  <a href="index.html#careers">Careers</a>
+  <a href="index.html#contact">Enquire</a>
+</div>
+
+<!-- ============ PROJECT CONTENT ============ -->
+<main id="projectContent">
+  <!-- Project Hero Header -->
+  <section class="project-header-hero">
+    <div class="wrap">
+      <a href="index.html#work" class="project-hero-back">← Back to Selected Work</a>
+      <div class="project-hero-top">
+        <span class="eyebrow" id="projectCategory">Commercial · Gurgaon, NCR</span>
+        <h1 id="projectTitle">Sesh Sports N Fitness</h1>
+        <div class="project-tagline" id="projectTagline">Large-Format Sports & Fitness Arena</div>
+        <p class="project-story-p" id="projectOverview"></p>
+      </div>
+
+      <!-- Project Key Specifications -->
+      <div class="specs-bar" id="projectSpecs"></div>
+    </div>
+  </section>
+
+  <!-- Project Gallery Grid -->
+  <section class="project-gallery-sec">
+    <div class="wrap">
+      <div class="gallery-toolbar">
+        <div>
+          <span class="eyebrow">Project Portfolio</span>
+          <h2 style="font-size: clamp(1.8rem, 3.2vw, 2.5rem); margin-top: 8px;">Spatial Photography & Details</h2>
+        </div>
+        <div class="filters" id="galleryFilters"></div>
+      </div>
+
+      <div class="gallery-grid" id="projectGalleryGrid"></div>
+    </div>
+  </section>
+
+  <!-- Next / Back Navigation -->
+  <section class="project-footer-nav">
+    <div class="wrap pnav-row">
+      <a href="index.html#work" class="pnav-btn back">
+        <span class="pnav-label">← Return</span>
+        <span class="pnav-title">All Selected Work</span>
+      </a>
+      <a href="#" class="pnav-btn next" id="nextProjectBtn">
+        <span class="pnav-label">Next Project →</span>
+        <span class="next-title">Next Project Title</span>
+      </a>
+    </div>
+  </section>
+</main>
+
+<!-- Fallback if not found -->
+<div id="projectNotFound" style="display:none; padding:180px 32px; text-align:center;">
+  <div class="wrap">
+    <h2 style="font-size:2.4rem;">Project Not Found</h2>
+    <p style="margin-top:16px; color:var(--ivory-dim);">The project you requested does not exist or is currently being documented.</p>
+    <a href="index.html#work" class="btn-primary" style="margin-top:32px;">View Portfolio</a>
+  </div>
+</div>
+
+<!-- ============ LIGHTBOX MODAL ============ -->
+<div class="lightbox-modal" id="lightboxModal">
+  <div class="lightbox-backdrop"></div>
+  <button class="lightbox-btn lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+  <button class="lightbox-btn lightbox-prev" id="lightboxPrev" aria-label="Previous">←</button>
+  <button class="lightbox-btn lightbox-next" id="lightboxNext" aria-label="Next">→</button>
+
+  <div class="lightbox-content">
+    <div class="lightbox-img-container">
+      <img id="lightboxImg" src="" alt="Project high resolution photography" />
+    </div>
+    <div class="lightbox-caption-bar">
+      <div class="lb-text">
+        <span class="lb-sec" id="lightboxSection"></span>
+        <span class="lb-cap" id="lightboxCaption"></span>
+      </div>
+      <div class="lightbox-counter" id="lightboxCounter">1 / 1</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap footer-row">
+    <div class="brand-type">
+      <span class="r-name" style="font-size:1.05rem;">RIVORA</span>
+      <span class="r-sub" style="display:block;">Design Studio</span>
+    </div>
+    <div class="footer-links">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#studio">Studio</a>
+      <a href="index.html#careers">Careers</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="https://www.instagram.com/rivora_designstudio/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        Instagram
+      </a>
+      <a href="https://www.youtube.com/@rishinakra1938" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        YouTube
+      </a>
+    </div>
+    <div class="footer-fine">© 2026 Rivora Design Studio. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="js/projects-data.js"></script>
+<script src="js/project-detail.js"></script>
+</body>
+</html>
