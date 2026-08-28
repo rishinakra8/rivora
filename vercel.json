@@ -1,8 +1,9 @@
 {
-  "version": 2,
-  "outputDirectory": "frontend",
+  "cleanUrls": true,
   "rewrites": [
-    { "source": "/project/:path*", "destination": "/project.html" },
-    { "source": "/((?!api/).*)", "destination": "/$1" }
+    { "source": "/project/:id", "destination": "/frontend/project.html" },
+    { "source": "/project", "destination": "/frontend/project.html" },
+    { "source": "/", "destination": "/frontend/index.html" },
+    { "source": "/((?!api/).*)", "destination": "/frontend/$1" }
   ]
 }
