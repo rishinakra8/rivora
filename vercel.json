@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "outputDirectory": "frontend",
+  "rewrites": [
+    { "source": "/project/:path*", "destination": "/project.html" },
+    { "source": "/((?!api/).*)", "destination": "/$1" }
+  ]
+}

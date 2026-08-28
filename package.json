@@ -1,0 +1,8 @@
+{
+  "name": "rivora-design-studio",
+  "version": "1.0.0",
+  "description": "Rivora Design Studio — Website & API",
+  "dependencies": {
+    "nodemailer": "^6.9.9"
+  }
+}
