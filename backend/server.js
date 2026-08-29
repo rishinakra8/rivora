@@ -186,6 +186,31 @@ app.post('/api/contact', async (req, res) => {
   }
 });
 
+// Multi-page clean routes
+app.get('/services', (req, res) => {
+  res.sendFile(path.join(frontendPath, 'services.html'));
+});
+
+app.get('/work', (req, res) => {
+  res.sendFile(path.join(frontendPath, 'work.html'));
+});
+
+app.get('/studio', (req, res) => {
+  res.sendFile(path.join(frontendPath, 'studio.html'));
+});
+
+app.get('/careers', (req, res) => {
+  res.sendFile(path.join(frontendPath, 'careers.html'));
+});
+
+app.get('/contact', (req, res) => {
+  res.sendFile(path.join(frontendPath, 'contact.html'));
+});
+
+app.get('/enquire', (req, res) => {
+  res.sendFile(path.join(frontendPath, 'contact.html'));
+});
+
 // Project page routes
 app.get('/project/:id', (req, res) => {
   res.sendFile(path.join(frontendPath, 'project.html'));
