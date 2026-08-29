@@ -86,11 +86,11 @@ const projects = [
   {
     id:       'dheeraj-residence',
     title:    'Dheeraj Residence',
-    location: 'Bestech, Gurgaon',
+    location: 'Bestech, Delhi - NCR',
     category: 'Residential',
     image:    'images/projects/DHEERAJ RESIDENCE_ BESTECH/1.jpg',
     size:     '',
-    tag:      'Residential'
+    tag:      'Architecture & Elevation'
   },
   {
     id:       'spice-garden',
