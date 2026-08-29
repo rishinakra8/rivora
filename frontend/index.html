@@ -223,29 +223,61 @@
     </div>
 
     <form class="contact-form reveal" id="contactForm">
-      <div class="field">
-        <label for="cname">Your Name</label>
-        <input type="text" id="cname" required placeholder="Full Name">
+      <div class="form-row">
+        <div class="field">
+          <label for="cname">Your Name *</label>
+          <input type="text" id="cname" required placeholder="Full Name">
+        </div>
+        <div class="field">
+          <label for="cemail">Email Address *</label>
+          <input type="email" id="cemail" required placeholder="name@domain.com">
+        </div>
       </div>
-      <div class="field">
-        <label for="cemail">Email Address</label>
-        <input type="email" id="cemail" required placeholder="name@domain.com">
+
+      <div class="form-row">
+        <div class="field">
+          <label for="cphone">Phone / WhatsApp Number *</label>
+          <input type="tel" id="cphone" required placeholder="+91 98765 43210">
+        </div>
+        <div class="field">
+          <label for="clocation">Project Location *</label>
+          <input type="text" id="clocation" required placeholder="e.g. Golf Course Rd, Gurgaon / South Delhi">
+        </div>
       </div>
-      <div class="field">
-        <label for="ctype">Project Type</label>
-        <select id="ctype">
-          <option>Residential Interior</option>
-          <option>Hospitality</option>
-          <option>Commercial / Office</option>
-          <option>Architectural Design</option>
-          <option>Other</option>
-        </select>
+
+      <div class="form-row">
+        <div class="field">
+          <label for="ctype">Project Type</label>
+          <select id="ctype">
+            <option>Residential Interior</option>
+            <option>Hospitality</option>
+            <option>Commercial / Office</option>
+            <option>Architectural Design</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="cbudget">Approx. Budget</label>
+          <select id="cbudget">
+            <option>₹25 Lacs – ₹50 Lacs</option>
+            <option>₹50 Lacs – ₹1 Crore</option>
+            <option>₹1 Crore – ₹2.5 Crores</option>
+            <option>₹2.5 Crores+</option>
+            <option>Flexible / To Discuss</option>
+          </select>
+        </div>
       </div>
+
+      <div class="field">
+        <label for="carea">Project Area / Size</label>
+        <input type="text" id="carea" placeholder="e.g. 3,500 sq ft / 4 BHK Penthouse / 12,000 sq ft Commercial">
+      </div>
+
       <div class="field">
         <label for="cmsg">Tell us about your project</label>
-        <textarea id="cmsg" placeholder="Location, size, timeline..."></textarea>
+        <textarea id="cmsg" placeholder="Location, size, timeline, specific brief..."></textarea>
       </div>
-      <button type="submit">Send Enquiry</button>
+      <button type="submit">Submit Enquiry</button>
     </form>
   </div>
 </section>

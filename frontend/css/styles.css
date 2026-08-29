@@ -342,24 +342,28 @@ nav.links a:hover::after{ width:100%; }
 .contact-details a:hover{ color:var(--brass-light); border-color:var(--brass-light); }
 .contact-details .label{ display:block; font-family:'Jost'; font-size:0.64rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--brass-light); margin-bottom:6px; }
 
-.cform{ display:flex; flex-direction:column; gap:22px; }
-.cform .field{ display:flex; flex-direction:column; gap:8px; }
-.cform label{ font-family:'Jost'; font-size:0.66rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--ivory-dim); }
-.cform input, .cform textarea, .cform select{
+.cform, .contact-form{ display:flex; flex-direction:column; gap:22px; }
+.cform .field, .contact-form .field{ display:flex; flex-direction:column; gap:8px; }
+.form-row{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+@media(max-width:600px){ .form-row{ grid-template-columns:1fr; gap:18px; } }
+.cform label, .contact-form label{ font-family:'Jost'; font-size:0.66rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--ivory-dim); }
+.cform input, .cform textarea, .cform select,
+.contact-form input, .contact-form textarea, .contact-form select{
   background:transparent; border:none; border-bottom:1px solid var(--line-strong);
-  color:var(--ivory); font-family:'Work Sans'; font-size:0.98rem; padding:10px 2px; font-weight:300;
+  color:var(--ivory); font-family:'Work Sans'; font-size:0.98rem; padding:10px 2px; font-weight:300; width:100%; box-sizing:border-box;
 }
-.cform select option{ background:var(--ink-2); }
-.cform input:focus, .cform textarea:focus, .cform select:focus{ outline:none; border-color:var(--brass); }
-.cform textarea{ resize:vertical; min-height:80px; }
-.cform button{
+.cform select option, .contact-form select option{ background:var(--ink-2); color:var(--ivory); }
+.cform input:focus, .cform textarea:focus, .cform select:focus,
+.contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus{ outline:none; border-color:var(--brass); }
+.cform textarea, .contact-form textarea{ resize:vertical; min-height:80px; }
+.cform button, .contact-form button{
   margin-top:10px; align-self:flex-start;
   font-family:'Jost'; font-size:0.78rem; letter-spacing:0.14em; text-transform:uppercase;
   background:var(--brass); color:var(--ink); padding:16px 36px; border:none; border-radius:2px; cursor:pointer;
   transition:all .35s ease; font-weight:500;
 }
-.cform button:hover{ background:var(--brass-light); transform:translateY(-2px); }
-.cform button:disabled{ opacity:0.6; cursor:not-allowed; transform:none; }
+.cform button:hover, .contact-form button:hover{ background:var(--brass-light); transform:translateY(-2px); }
+.cform button:disabled, .contact-form button:disabled{ opacity:0.6; cursor:not-allowed; transform:none; }
 
 footer{ padding:50px 0 40px; border-top:1px solid var(--line); }
 .footer-row{

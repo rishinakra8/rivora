@@ -25,7 +25,7 @@ if (!fs.existsSync(dataDir)) {
 
 const csvFilePath = path.join(dataDir, 'enquiries.csv');
 if (!fs.existsSync(csvFilePath)) {
-  const csvHeaders = 'Timestamp,Client Name,Email Address,Project Type,Project Details / Message,Status\n';
+  const csvHeaders = 'Timestamp,Client Name,Email Address,Phone Number,Project Type,Location,Approx. Budget,Project Area,Message,Status\n';
   fs.writeFileSync(csvFilePath, csvHeaders, 'utf8');
 }
 
@@ -45,7 +45,7 @@ function escapeCsv(val) {
 // Contact form submission endpoint
 app.post('/api/contact', async (req, res) => {
   try {
-    const { name, email, projectType, message } = req.body;
+    const { name, email, phone, projectType, location, budget, area, message } = req.body;
 
     // Validation
     if (!name || typeof name !== 'string' || name.trim() === '') {
@@ -62,15 +62,19 @@ app.post('/api/contact', async (req, res) => {
       });
     }
 
-    const cleanName = name.trim();
-    const cleanEmail = email.trim();
-    const cleanProjectType = (projectType && typeof projectType === 'string') ? projectType.trim() : 'Not Specified';
-    const cleanMessage = (message && typeof message === 'string') ? message.trim() : '(No message provided)';
-    const timestampStr = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
+    const cleanName        = name.trim();
+    const cleanEmail       = email.trim();
+    const cleanPhone       = (phone && typeof phone === 'string') ? phone.trim() : 'Not Provided';
+    const cleanProjectType = (projectType && typeof projectType === 'string') ? projectType.trim() : 'General Enquiry';
+    const cleanLocation    = (location && typeof location === 'string') ? location.trim() : 'Not Specified';
+    const cleanBudget      = (budget && typeof budget === 'string') ? budget.trim() : 'Flexible / Discussion';
+    const cleanArea        = (area && typeof area === 'string') ? area.trim() : 'Not Specified';
+    const cleanMessage     = (message && typeof message === 'string') ? message.trim() : '(No message provided)';
+    const timestampStr     = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
 
     // 1. Log to local CSV spreadsheet backup
     try {
-      const csvRow = `${escapeCsv(timestampStr)},${escapeCsv(cleanName)},${escapeCsv(cleanEmail)},${escapeCsv(cleanProjectType)},${escapeCsv(cleanMessage)},"New Lead"\n`;
+      const csvRow = `${escapeCsv(timestampStr)},${escapeCsv(cleanName)},${escapeCsv(cleanEmail)},${escapeCsv(cleanPhone)},${escapeCsv(cleanProjectType)},${escapeCsv(cleanLocation)},${escapeCsv(cleanBudget)},${escapeCsv(cleanArea)},${escapeCsv(cleanMessage)},"New Lead"\n`;
       fs.appendFileSync(csvFilePath, csvRow, 'utf8');
       console.log(`[Contact API] Logged enquiry to CSV: ${cleanName}`);
     } catch (csvErr) {
@@ -82,14 +86,17 @@ app.post('/api/contact', async (req, res) => {
       try {
         const payload = {
           formattedDate: timestampStr,
-          name: cleanName,
-          email: cleanEmail,
-          projectType: cleanProjectType,
-          message: cleanMessage,
-          status: 'New Lead'
+          name:          cleanName,
+          email:         cleanEmail,
+          phone:         cleanPhone,
+          projectType:   cleanProjectType,
+          location:      cleanLocation,
+          budget:        cleanBudget,
+          area:          cleanArea,
+          message:       cleanMessage,
+          status:        'New Lead'
         };
 
-        // Asynchronous webhook trigger
         fetch(process.env.GOOGLE_SHEETS_WEBHOOK_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },

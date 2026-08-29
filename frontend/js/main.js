@@ -275,10 +275,14 @@ if(contactForm){
     const btn = this.querySelector('button');
     const originalText = btn.textContent;
     
-    const name = document.getElementById('cname').value.trim();
-    const email = document.getElementById('cemail').value.trim();
-    const projectType = document.getElementById('ctype').value;
-    const message = document.getElementById('cmsg').value.trim();
+    const name = document.getElementById('cname') ? document.getElementById('cname').value.trim() : '';
+    const email = document.getElementById('cemail') ? document.getElementById('cemail').value.trim() : '';
+    const phone = document.getElementById('cphone') ? document.getElementById('cphone').value.trim() : '';
+    const location = document.getElementById('clocation') ? document.getElementById('clocation').value.trim() : '';
+    const projectType = document.getElementById('ctype') ? document.getElementById('ctype').value : 'General Enquiry';
+    const budget = document.getElementById('cbudget') ? document.getElementById('cbudget').value : 'Flexible';
+    const area = document.getElementById('carea') ? document.getElementById('carea').value.trim() : '';
+    const message = document.getElementById('cmsg') ? document.getElementById('cmsg').value.trim() : '';
 
     btn.disabled = true;
     btn.textContent = "Sending...";
@@ -289,13 +293,13 @@ if(contactForm){
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ name, email, projectType, message })
+        body: JSON.stringify({ name, email, phone, location, projectType, budget, area, message })
       });
 
       const data = await response.json().catch(() => ({}));
 
       if (response.ok && data.success !== false) {
-        btn.textContent = "Sent — We'll be in touch";
+        btn.textContent = "Enquiry Sent — Thank You";
         contactForm.reset();
       } else {
         btn.textContent = data.message || "Error — Please try again";
@@ -307,7 +311,7 @@ if(contactForm){
       setTimeout(() => {
         btn.textContent = originalText;
         btn.disabled = false;
-      }, 3000);
+      }, 4000);
     }
   });
 }
