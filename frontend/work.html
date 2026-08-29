@@ -153,6 +153,19 @@
             <div class="loc">${p.location}</div>
           </div>
         </div>`;
+
+      if (p.cover) {
+        const imgObj = new Image();
+        imgObj.onload = () => {
+          const t = card.querySelector('.tile');
+          if (t) t.classList.add('loaded');
+        };
+        imgObj.src = encodeURI(p.cover);
+      } else {
+        const t = card.querySelector('.tile');
+        if (t) t.classList.add('loaded');
+      }
+
       grid.appendChild(card);
     });
   }

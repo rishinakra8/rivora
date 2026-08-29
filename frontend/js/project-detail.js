@@ -137,6 +137,16 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       `;
 
+      const imgEl = card.querySelector('img');
+      const wrapEl = card.querySelector('.gallery-img-wrap');
+      if (imgEl) {
+        if (imgEl.complete) {
+          wrapEl.classList.add('loaded');
+        } else {
+          imgEl.addEventListener('load', () => wrapEl.classList.add('loaded'));
+        }
+      }
+
       card.addEventListener('click', () => openLightbox(globalIdx));
       grid.appendChild(card);
     });
@@ -165,6 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeBtn = document.getElementById('lightboxClose');
   const prevBtn = document.getElementById('lightboxPrev');
   const nextBtnLb = document.getElementById('lightboxNext');
+  const lightboxImgContainer = document.querySelector('.lightbox-img-container');
 
   function openLightbox(index) {
     if (!galleryImages || galleryImages.length === 0) return;
@@ -188,7 +199,17 @@ document.addEventListener('DOMContentLoaded', () => {
     if (activeLightboxIndex >= galleryImages.length) activeLightboxIndex = 0;
 
     const currentImg = galleryImages[activeLightboxIndex];
-    if (modalImg) modalImg.src = encodeURI(currentImg.src);
+    if (lightboxImgContainer) lightboxImgContainer.classList.add('loading');
+    
+    if (modalImg) {
+      modalImg.onload = () => {
+        if (lightboxImgContainer) lightboxImgContainer.classList.remove('loading');
+      };
+      modalImg.src = encodeURI(currentImg.src);
+      if (modalImg.complete) {
+        if (lightboxImgContainer) lightboxImgContainer.classList.remove('loading');
+      }
+    }
     if (modalSec) modalSec.textContent = currentImg.label || project.category;
     if (modalCap) modalCap.textContent = project.title;
     if (modalCounter) modalCounter.textContent = `${activeLightboxIndex + 1} / ${galleryImages.length}`;

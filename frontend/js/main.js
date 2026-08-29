@@ -201,6 +201,17 @@ function renderWork(filter){
             <div class="loc">${p.location}</div>
           </div>
         </div>`;
+      if (p.image) {
+        const imgObj = new Image();
+        imgObj.onload = () => {
+          const t = card.querySelector('.tile');
+          if (t) t.classList.add('loaded');
+        };
+        imgObj.src = encodeURI(p.image);
+      } else {
+        const t = card.querySelector('.tile');
+        if (t) t.classList.add('loaded');
+      }
     }
     grid.appendChild(card);
   });
