@@ -37,6 +37,64 @@ img{max-width:100%; display:block;}
 .wrap{max-width:1180px; margin:0 auto; padding:0 32px;}
 section{position:relative;}
 
+/* ---------- LUXURY PRELOADER ---------- */
+.preloader{
+  position:fixed; inset:0; z-index:99999;
+  background:var(--ink);
+  display:flex; align-items:center; justify-content:center;
+  transition:opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.7s ease;
+}
+.preloader.fade-out{
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+}
+.preloader-inner{
+  display:flex; flex-direction:column; align-items:center; gap:18px; text-align:center;
+}
+.preloader-logo{
+  width:44px; height:44px;
+  animation:pulseLogo 2s infinite ease-in-out;
+}
+.preloader-title{
+  font-family:'Cormorant Garamond', serif; font-size:1.5rem; letter-spacing:0.25em; color:var(--ivory);
+}
+.preloader-line{
+  width:120px; height:1px; background:rgba(184,146,90,0.2); overflow:hidden; position:relative;
+}
+.preloader-progress{
+  position:absolute; inset:0; width:100%;
+  background:linear-gradient(90deg, transparent, var(--brass), transparent);
+  animation:preloaderSlide 1.5s infinite ease-in-out;
+}
+@keyframes pulseLogo{
+  0%, 100%{ transform:scale(1); opacity:0.85; }
+  50%{ transform:scale(1.06); opacity:1; filter:drop-shadow(0 0 10px rgba(184,146,90,0.4)); }
+}
+@keyframes preloaderSlide{
+  0%{ transform:translateX(-100%); }
+  100%{ transform:translateX(100%); }
+}
+
+/* ---------- LAZY LOADING SHIMMER & SKELETON ---------- */
+@keyframes shimmerBg {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.tile-img, .gallery-img-wrap, .service-feature-photo, .studio-visual, .svc-photo {
+  background-color: var(--ink-2);
+  background-image: linear-gradient(90deg, rgba(28,24,20,0.9) 0%, rgba(184,146,90,0.06) 50%, rgba(28,24,20,0.9) 100%);
+  background-size: 200% 100%;
+  animation: shimmerBg 2.5s infinite linear;
+}
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+img[loading="lazy"].loaded, img[loading="lazy"]:not([src=""]) {
+  opacity: 1;
+}
+
 /* ---------- NAV ---------- */
 header{
   position:fixed; top:0; left:0; right:0; z-index:200;

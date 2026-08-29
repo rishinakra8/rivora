@@ -222,4 +222,19 @@ document.addEventListener('DOMContentLoaded', () => {
   if (header) {
     window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 40));
   }
+
+  // Preloader dismiss
+  const preloader = document.getElementById('preloader');
+  if (preloader) {
+    setTimeout(() => preloader.classList.add('fade-out'), 250);
+  }
 });
+
+window.addEventListener('load', () => {
+  const preloader = document.getElementById('preloader');
+  if (preloader) setTimeout(() => preloader.classList.add('fade-out'), 250);
+});
+setTimeout(() => {
+  const preloader = document.getElementById('preloader');
+  if (preloader && !preloader.classList.contains('fade-out')) preloader.classList.add('fade-out');
+}, 1200);
