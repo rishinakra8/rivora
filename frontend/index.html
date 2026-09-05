@@ -42,10 +42,10 @@
     <nav class="links">
       <a href="services.html">Services</a>
       <a href="work.html">Work</a>
-      <a href="studio.html#ethos">Ethos</a>
-      <a href="studio.html#process">Process</a>
       <a href="studio.html">Studio</a>
+      <a href="testimonials.html">Testimonials</a>
       <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact</a>
     </nav>
     <a href="contact.html" class="nav-cta">Enquire</a>
     <button class="burger" id="burgerBtn" aria-label="Open menu">
@@ -57,9 +57,8 @@
 <div class="mobile-menu" id="mobileMenu">
   <a href="services.html">Services</a>
   <a href="work.html">Work</a>
-  <a href="studio.html#ethos">Ethos</a>
-  <a href="studio.html#process">Process</a>
   <a href="studio.html">Studio</a>
+  <a href="testimonials.html">Testimonials</a>
   <a href="careers.html">Careers</a>
   <a href="contact.html">Enquire</a>
 </div>
@@ -188,43 +187,113 @@
 <!-- ============ TESTIMONIALS ============ -->
 <section class="testimonials section-pad" id="testimonials">
   <div class="wrap">
-    <div class="section-head reveal" style="text-align:center; max-width:680px; margin:0 auto;">
-      <span class="eyebrow">Client Endorsements</span>
-      <h2 style="font-size:clamp(1.8rem,3vw,2.5rem);">What our clients say about working with us.</h2>
-      <p style="margin-top:12px;">Real experiences from homeowners, commercial leaders, and hospitality partners across India.</p>
+    <div class="section-head reveal" style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:20px;">
+      <div>
+        <span class="eyebrow">Client Endorsements</span>
+        <h2 style="font-size:clamp(1.8rem,3.2vw,2.6rem);">What our clients say about working with us.</h2>
+        <p style="margin-top:10px;">Real experiences from homeowners, commercial leaders, and hospitality partners across India.</p>
+      </div>
+      <div>
+        <a href="testimonials.html" class="btn-ghost">View All Reviews &amp; Stories →</a>
+      </div>
     </div>
 
-    <div class="testi-grid reveal">
-      <div class="testi-card">
-        <div>
-          <div class="testi-quote-icon">“</div>
-          <p class="testi-text">Rivora brought an unmatched level of design rigour and execution speed to Sesh Sports N Fitness. Having architecture, interiors, and turnkey contracting under one roof ensured zero compromises from concept renders to opening day.</p>
-        </div>
-        <div class="testi-author">
-          <span class="testi-name">Sesh Sports N Fitness</span>
-          <span class="testi-project">Large-Format Commercial &amp; Fitness Arena · Gurgaon</span>
+    <!-- Slider Carousel Container -->
+    <div class="testi-slider-wrap reveal">
+      <div class="testi-slider-viewport">
+        <div class="testi-slider-track" id="testiSliderTrack">
+          <!-- Slide 1: Sesh Sports N Fitness -->
+          <div class="testi-slide">
+            <div class="testi-card">
+              <div>
+                <div class="testi-quote-icon">“</div>
+                <p class="testi-text">Rivora brought an unmatched level of design rigour and execution speed to Sesh Sports N Fitness. Having architecture, interiors, and turnkey contracting under one roof ensured zero compromises from concept renders to opening day.</p>
+              </div>
+              <div class="testi-author">
+                <span class="testi-name">Sesh Sports N Fitness</span>
+                <span class="testi-project">Large-Format Commercial &amp; Fitness Arena · Gurgaon</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2: Dheeraj Residence -->
+          <div class="testi-slide">
+            <div class="testi-card">
+              <div>
+                <div class="testi-quote-icon">“</div>
+                <p class="testi-text">The team's attention to architectural detailing, spatial flow, and material honesty turned our vision into a timeless home. Their transparency on timelines and locked BOQ made the entire execution smooth and stress-free.</p>
+              </div>
+              <div class="testi-author">
+                <span class="testi-name">Private Residence Client</span>
+                <span class="testi-project">Dheeraj Residence · Bestech, Delhi - NCR</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3: Spice Garden -->
+          <div class="testi-slide">
+            <div class="testi-card">
+              <div>
+                <div class="testi-quote-icon">“</div>
+                <p class="testi-text">From exterior facade articulation to ambient interior moods, Rivora crafted a distinctive spatial experience that our patrons love every single day. True architects who understand both aesthetics and business functionality.</p>
+              </div>
+              <div class="testi-author">
+                <span class="testi-name">Spice Garden Hospitality</span>
+                <span class="testi-project">Dining &amp; Hospitality Architecture · NCR</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4: Kunal Residence -->
+          <div class="testi-slide">
+            <div class="testi-card">
+              <div>
+                <div class="testi-quote-icon">“</div>
+                <p class="testi-text">Rivora transformed our living space with exceptional craftsmanship and contemporary elegance. Every millimetre of joinery, lighting detail, and finish was delivered with complete fidelity to the original 3D renders.</p>
+              </div>
+              <div class="testi-author">
+                <span class="testi-name">Kunal &amp; Family</span>
+                <span class="testi-project">Kunal Residence · Gurgaon, NCR</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 5: Rinku Goyal Commercial -->
+          <div class="testi-slide">
+            <div class="testi-card">
+              <div>
+                <div class="testi-quote-icon">“</div>
+                <p class="testi-text">Their architectural facade engineering and commercial spatial zoning maximized both functional tenant value and aesthetic street prominence. A reliable practice with immense technical discipline.</p>
+              </div>
+              <div class="testi-author">
+                <span class="testi-name">Commercial Complex Developer</span>
+                <span class="testi-project">Commercial Complex · Bhiwadi, NCR</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 6: Luv Residence -->
+          <div class="testi-slide">
+            <div class="testi-card">
+              <div>
+                <div class="testi-quote-icon">“</div>
+                <p class="testi-text">Working with Ar. Rishi Nakra, Ar. Shreshtha Shandilya and the Rivora team was a pleasure. Their ability to balance luxury aesthetics with day-to-day functional practicality gave us a home that feels peaceful and deeply personal.</p>
+              </div>
+              <div class="testi-author">
+                <span class="testi-name">Luv &amp; Family</span>
+                <span class="testi-project">Luv Residence · Gurgaon, NCR</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="testi-card">
-        <div>
-          <div class="testi-quote-icon">“</div>
-          <p class="testi-text">The team's attention to architectural detailing, spatial flow, and material honesty turned our vision into a timeless home. Their transparency on timelines and locked BOQ made the entire execution smooth and stress-free.</p>
-        </div>
-        <div class="testi-author">
-          <span class="testi-name">Private Residence Client</span>
-          <span class="testi-project">Dheeraj Residence · Bestech, Delhi - NCR</span>
-        </div>
-      </div>
-
-      <div class="testi-card">
-        <div>
-          <div class="testi-quote-icon">“</div>
-          <p class="testi-text">From exterior facade articulation to ambient interior moods, Rivora crafted a distinctive spatial experience that our patrons love every single day. True architects who understand both aesthetics and business functionality.</p>
-        </div>
-        <div class="testi-author">
-          <span class="testi-name">Spice Garden Hospitality</span>
-          <span class="testi-project">Dining &amp; Hospitality Architecture · NCR</span>
+      <!-- Slider Controls -->
+      <div class="testi-controls">
+        <div class="testi-dots" id="testiSliderDots"></div>
+        <div class="testi-arrows">
+          <button class="testi-arrow-btn" id="testiPrevBtn" aria-label="Previous testimonials">←</button>
+          <button class="testi-arrow-btn" id="testiNextBtn" aria-label="Next testimonials">→</button>
         </div>
       </div>
     </div>

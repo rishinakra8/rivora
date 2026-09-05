@@ -5,6 +5,7 @@
     { "source": "/work", "destination": "/work.html" },
     { "source": "/studio", "destination": "/studio.html" },
     { "source": "/careers", "destination": "/careers.html" },
+    { "source": "/testimonials", "destination": "/testimonials.html" },
     { "source": "/contact", "destination": "/contact.html" },
     { "source": "/enquire", "destination": "/contact.html" },
     { "source": "/project/:id", "destination": "/project.html" },

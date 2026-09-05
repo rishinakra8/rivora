@@ -501,20 +501,45 @@ nav.links a:hover::after{ width:100%; }
   color:var(--ivory-dim); font-size:0.95rem; line-height:1.75; font-weight:300;
 }
 
-/* ---------- TESTIMONIALS ---------- */
+/* ---------- TESTIMONIALS SLIDER & PAGE ---------- */
 .testimonials{
   background:
     radial-gradient(ellipse at 15% 85%, rgba(184,146,90,0.08), transparent 50%),
     radial-gradient(ellipse at 85% 15%, rgba(72,89,76,0.12), transparent 50%),
     var(--ink-2);
   border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+  position:relative; overflow:hidden;
 }
-.testi-grid{
-  display:grid; grid-template-columns:repeat(3, 1fr); gap:32px; margin-top:50px;
+
+.testi-slider-wrap{
+  position:relative; margin-top:50px;
 }
+
+.testi-slider-viewport{
+  overflow:hidden; width:100%;
+}
+
+.testi-slider-track{
+  display:flex; transition:transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  gap:28px;
+}
+
+.testi-slide{
+  flex:0 0 calc((100% - 56px) / 3);
+  box-sizing:border-box;
+}
+
+@media(max-width:1024px){
+  .testi-slide{ flex:0 0 calc((100% - 28px) / 2); }
+}
+@media(max-width:680px){
+  .testi-slide{ flex:0 0 100%; }
+}
+
 .testi-card{
   background:var(--ink); border:1px solid var(--line); padding:36px 30px;
   border-radius:2px; display:flex; flex-direction:column; justify-content:space-between;
+  height:100%; box-sizing:border-box;
   transition:border-color .4s ease, transform .4s ease;
 }
 .testi-card:hover{
@@ -541,8 +566,66 @@ nav.links a:hover::after{ width:100%; }
   font-size:0.82rem; color:var(--ivory-dim); font-weight:300;
 }
 
-@media(max-width:960px){
-  .testi-grid{ grid-template-columns:1fr; gap:24px; }
+/* Slider Controls */
+.testi-controls{
+  display:flex; justify-content:space-between; align-items:center; margin-top:36px;
+}
+.testi-arrows{
+  display:flex; gap:12px;
+}
+.testi-arrow-btn{
+  width:44px; height:44px; border-radius:2px; border:1px solid var(--line-strong);
+  background:var(--ink); color:var(--ivory); display:flex; align-items:center; justify-content:center;
+  cursor:pointer; transition:all .3s ease; font-size:1.1rem;
+}
+.testi-arrow-btn:hover:not(:disabled){
+  background:var(--brass); color:var(--ink); border-color:var(--brass);
+}
+.testi-arrow-btn:disabled{
+  opacity:0.35; cursor:not-allowed;
+}
+.testi-dots{
+  display:flex; gap:8px; align-items:center;
+}
+.testi-dot{
+  width:8px; height:8px; border-radius:50%; background:rgba(184,146,90,0.25);
+  border:none; cursor:pointer; transition:all .3s ease; padding:0;
+}
+.testi-dot.active{
+  background:var(--brass); transform:scale(1.3);
+}
+
+/* Dedicated Testimonials Page Cards */
+.testi-full-grid{
+  display:grid; grid-template-columns:repeat(2, 1fr); gap:32px;
+}
+@media(max-width:860px){
+  .testi-full-grid{ grid-template-columns:1fr; gap:24px; }
+}
+.testi-page-card{
+  background:var(--ink-2); border:1px solid var(--line); padding:36px 32px;
+  border-radius:2px; display:flex; flex-direction:column; justify-content:space-between;
+  transition:border-color .4s ease, transform .4s ease;
+}
+.testi-page-card:hover{
+  border-color:var(--brass);
+  transform:translateY(-3px);
+}
+.testi-card-top{
+  display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;
+}
+.testi-badge{
+  font-family:'Jost', sans-serif; font-size:0.64rem; letter-spacing:0.18em;
+  text-transform:uppercase; color:var(--brass-light); border:1px solid var(--line);
+  padding:4px 10px; border-radius:2px;
+}
+.testi-proj-link{
+  font-family:'Jost', sans-serif; font-size:0.7rem; letter-spacing:0.12em;
+  text-transform:uppercase; color:var(--brass-light); border-bottom:1px solid var(--brass);
+  padding-bottom:2px; transition:color .3s ease;
+}
+.testi-proj-link:hover{
+  color:var(--ivory);
 }
 
 /* ---------- CAREERS ---------- */

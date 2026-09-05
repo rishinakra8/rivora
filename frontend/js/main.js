@@ -287,6 +287,104 @@ const io = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 revealEls.forEach(el => io.observe(el));
 
+/* Testimonials Slider Controller */
+const track = document.getElementById('testiSliderTrack');
+const prevBtn = document.getElementById('testiPrevBtn');
+const nextBtn = document.getElementById('testiNextBtn');
+const dotsContainer = document.getElementById('testiSliderDots');
+
+if (track && prevBtn && nextBtn) {
+  let currentIndex = 0;
+  const slides = track.querySelectorAll('.testi-slide');
+  
+  function getVisibleCount() {
+    if (window.innerWidth <= 680) return 1;
+    if (window.innerWidth <= 1024) return 2;
+    return 3;
+  }
+
+  function getMaxIndex() {
+    const visible = getVisibleCount();
+    return Math.max(0, slides.length - visible);
+  }
+
+  function renderDots() {
+    if (!dotsContainer) return;
+    dotsContainer.innerHTML = '';
+    const visible = getVisibleCount();
+    const totalPages = Math.ceil(slides.length / visible);
+    
+    for (let p = 0; p < totalPages; p++) {
+      const dot = document.createElement('button');
+      dot.className = 'testi-dot' + (Math.floor(currentIndex / visible) === p ? ' active' : '');
+      dot.setAttribute('aria-label', `Page ${p + 1}`);
+      dot.addEventListener('click', () => {
+        currentIndex = Math.min(p * visible, getMaxIndex());
+        updateSlider();
+      });
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  function updateSlider() {
+    const maxIdx = getMaxIndex();
+    if (currentIndex < 0) currentIndex = 0;
+    if (currentIndex > maxIdx) currentIndex = maxIdx;
+
+    const visible = getVisibleCount();
+    if (slides.length > 0) {
+      const slideWidth = slides[0].offsetWidth;
+      const gap = 28;
+      const offset = currentIndex * (slideWidth + gap);
+      track.style.transform = `translateX(-${offset}px)`;
+    }
+
+    prevBtn.disabled = (currentIndex === 0);
+    nextBtn.disabled = (currentIndex >= maxIdx);
+
+    // Update active dot
+    if (dotsContainer) {
+      const activePage = Math.floor(currentIndex / visible);
+      const dots = dotsContainer.querySelectorAll('.testi-dot');
+      dots.forEach((d, i) => d.classList.toggle('active', i === activePage));
+    }
+  }
+
+  prevBtn.addEventListener('click', () => {
+    const step = getVisibleCount();
+    currentIndex = Math.max(0, currentIndex - step);
+    updateSlider();
+  });
+
+  nextBtn.addEventListener('click', () => {
+    const step = getVisibleCount();
+    const maxIdx = getMaxIndex();
+    currentIndex = Math.min(maxIdx, currentIndex + step);
+    updateSlider();
+  });
+
+  // Touch Swipe support for mobile
+  let touchStartX = 0;
+  let touchEndX = 0;
+  track.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+  track.addEventListener('touchend', e => {
+    touchEndX = e.changedTouches[0].screenX;
+    if (touchStartX - touchEndX > 45) {
+      nextBtn.click();
+    } else if (touchEndX - touchStartX > 45) {
+      prevBtn.click();
+    }
+  }, { passive: true });
+
+  window.addEventListener('resize', () => {
+    renderDots();
+    updateSlider();
+  });
+
+  renderDots();
+  updateSlider();
+}
+
 /* Preloader dismiss */
 window.addEventListener('load', () => {
   const preloader = document.getElementById('preloader');
