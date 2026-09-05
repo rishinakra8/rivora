@@ -48,7 +48,8 @@ function renderServices(){
   grid.innerHTML = "";
   services.forEach((s, i) => {
     const bg = s.image ? `background-image:url('${s.image}')` : `background:${gradients[i % gradients.length]}`;
-    const photo = document.createElement('div');
+    const photo = document.createElement('a');
+    photo.href = 'services.html';
     photo.className = 'svc-photo' + (s.image ? '' : ' empty');
     photo.innerHTML = s.image
       ? `<div class="ph-img" style="${bg}"></div>`
@@ -59,7 +60,10 @@ function renderServices(){
     text.innerHTML = `
       <div class="svc-num">${s.num}</div>
       <h3>${s.title}</h3>
-      <p>${s.description}</p>`;
+      <p>${s.description}</p>
+      <div style="margin-top:auto; padding-top:24px;">
+        <a href="services.html" style="font-family:'Jost'; font-size:0.7rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--brass-light); border-bottom:1px solid var(--brass); padding-bottom:3px; display:inline-flex; align-items:center; gap:6px;">Explore Service →</a>
+      </div>`;
 
     grid.appendChild(photo);
     grid.appendChild(text);
@@ -81,7 +85,7 @@ const projects = [
     category: 'Commercial',
     image:    'images/projects/sesh sports and fitness/1.png',
     size:     'wide',
-    tag:      'Flagship Project'
+    tag:      'Flagship Commercial Project'
   },
   {
     id:       'dheeraj-residence',
@@ -99,7 +103,7 @@ const projects = [
     category: 'Hospitality',
     image:    'images/projects/SPICE GARDEN/RENDERS/render 1.png',
     size:     'wide',
-    tag:      'Hospitality'
+    tag:      'Hospitality Dining Architecture'
   },
   {
     id:       'kunal-residence',
@@ -108,7 +112,7 @@ const projects = [
     category: 'Residential',
     image:    'images/projects/KUNAL RESIDENCE/3D VIEW/1.png',
     size:     'tall',
-    tag:      'Residential'
+    tag:      'Luxury Residential'
   },
   {
     id:       'luv-residence',
@@ -117,7 +121,7 @@ const projects = [
     category: 'Residential',
     image:    'images/projects/LUV RESIDENCE/3D VIEW/L2.png',
     size:     '',
-    tag:      'Residential'
+    tag:      'Modern Residential'
   },
   {
     id:       'rinku-goyal-commercial',
@@ -126,7 +130,7 @@ const projects = [
     category: 'Commercial',
     image:    'images/projects/RINKU GOYAL_COMMERCIAL BHIWADI/E1.png',
     size:     '',
-    tag:      'Commercial'
+    tag:      'Commercial Complex'
   },
   {
     id:       'naveen-residence',
@@ -135,7 +139,7 @@ const projects = [
     category: 'Residential',
     image:    'images/projects/NAVEEN RESIDENCE/L1.png',
     size:     '',
-    tag:      'Residential'
+    tag:      'Bespoke Residence'
   },
   {
     id:       'renders',
@@ -144,7 +148,7 @@ const projects = [
     category: 'Residential',
     image:    'images/projects/Renders/Exterior/Elevation 1/1.png',
     size:     'wide',
-    tag:      'Visualisation'
+    tag:      '3D Architectural Visualisation'
   }
 ];
 
@@ -196,9 +200,14 @@ function renderWork(filter){
           <div class="tile-img" style="${bg}"></div>
           <div class="scrim"></div>
           <div class="meta">
-            <div class="cat">${p.tag || p.category}</div>
-            <h3>${p.title}</h3>
-            <div class="loc">${p.location}</div>
+            <div style="display:flex; justify-content:space-between; align-items:flex-end; width:100%;">
+              <div>
+                <div class="cat">${p.tag || p.category}</div>
+                <h3>${p.title}</h3>
+                <div class="loc">${p.location}</div>
+              </div>
+              <span style="font-family:'Jost'; font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--brass-light); border-bottom:1px solid var(--brass); padding-bottom:2px; white-space:nowrap; margin-bottom:4px;">View Project ↗</span>
+            </div>
           </div>
         </div>`;
       if (p.image) {
