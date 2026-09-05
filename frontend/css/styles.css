@@ -116,15 +116,15 @@ section{position:relative;}
   visibility: hidden;
 }
 
-/* Smooth blur-up transition for gallery & feature images */
-.gallery-img-wrap img, .service-feature-photo img, .studio-portrait {
+/* Smooth blur-up transition for gallery cards */
+.gallery-img-wrap img {
   opacity: 0;
   filter: blur(10px);
   transform: scale(1.03);
   transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), filter 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.gallery-img-wrap.loaded img, .service-feature-photo.loaded img, .studio-visual.loaded .studio-portrait, img.is-loaded {
+.gallery-img-wrap.loaded img, .service-feature-photo img, .studio-portrait, img.is-loaded {
   opacity: 1 !important;
   filter: blur(0px) !important;
   transform: scale(1) !important;
