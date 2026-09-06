@@ -52,8 +52,8 @@ section{position:relative;}
 .preloader-inner{
   display:flex; flex-direction:column; align-items:center; gap:18px; text-align:center;
 }
-.preloader-logo{
-  width:44px; height:44px;
+.preloader-logo, .preloader-logo-img{
+  width:58px; height:58px; object-fit:contain;
   animation:pulseLogo 2s infinite ease-in-out;
 }
 .preloader-title{
@@ -192,8 +192,9 @@ header.scrolled{
   max-width:1180px; margin:0 auto; padding:0 32px;
   display:flex; align-items:center; justify-content:space-between;
 }
-.brandmark{ display:flex; align-items:center; gap:12px; }
-.brandmark svg{ width:30px; height:30px; flex-shrink:0; }
+.brandmark{ display:flex; align-items:center; gap:14px; }
+.brandmark svg, .brand-logo-img{ width:34px; height:34px; flex-shrink:0; object-fit:contain; transition:transform 0.3s ease; }
+.brandmark:hover .brand-logo-img{ transform:scale(1.06); }
 .brand-type{ line-height:1.1; }
 .brand-type .r-name{ font-family:'Cormorant Garamond', serif; font-size:1.28rem; letter-spacing:0.18em; color:var(--ivory); }
 .brand-type .r-sub{ font-family:'Jost', sans-serif; font-size:0.52rem; letter-spacing:0.34em; color:var(--brass-light); text-transform:uppercase; margin-top:2px;}
