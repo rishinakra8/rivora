@@ -85,7 +85,7 @@ const projects = [
     category: 'Commercial',
     image:    'images/projects/sesh sports and fitness/1.png',
     size:     'wide',
-    tag:      'Flagship Commercial Project'
+    tag:      'SPORTS & RECREATION | SPORTS CLUB'
   },
   {
     id:       'dheeraj-residence',

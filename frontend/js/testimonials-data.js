@@ -22,7 +22,7 @@ const TESTIMONIALS = [
     location: "Gurgaon, NCR",
     category: "Commercial",
     projectId: "sesh-sports-and-fitness",
-    year: "2024"
+    year: "2026"
   },
   {
     id: 'dheeraj-residence',

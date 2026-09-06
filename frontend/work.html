@@ -123,7 +123,7 @@
     if (!grid) return;
     grid.innerHTML = '';
 
-    const list = filter === 'all' ? projectsList : projectsList.filter(p => p.category === filter);
+    const list = filter === 'all' ? projectsList : projectsList.filter(p => p.category === filter || (filter === 'Commercial' && (p.category.includes('Commercial') || p.category.includes('SPORTS'))));
     
     if (countEl) {
       countEl.textContent = `Showing ${list.length} ${list.length === 1 ? 'Project' : 'Projects'}`;

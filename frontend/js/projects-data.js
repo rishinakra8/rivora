@@ -11,12 +11,12 @@ const PROJECTS = [
     id:          'sesh-sports-and-fitness',
     title:       'Sesh Sports N Fitness',
     location:    'Gurgaon, NCR',
-    category:    'Commercial',
+    category:    'SPORTS & RECREATION | SPORTS CLUB',
     tag:         'Flagship Project',
     size:        'wide',                         // homepage grid tile size
-    year:        '2024',
-    area:        '12,000 sq ft',
-    scope:       'Interior Design · Branding Integration · Execution',
+    year:        '2026',
+    area:        '2.8 Acre',
+    scope:       'Architecture, Interior Design, Execution',
     description: 'A high-energy sports and fitness destination designed around movement, performance, and community — combining bold spatial gestures with precision detailing across gym, studio, café, and conference zones.',
     cover:       'images/projects/sesh sports and fitness/1.png',
     gallery: [
