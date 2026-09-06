@@ -172,7 +172,24 @@ function renderWork(filter){
   const grid = document.getElementById('workGrid');
   if(!grid) return;
   grid.innerHTML = "";
-  const list = filter === 'all' ? projects : projects.filter(p => p.category === filter);
+  const list = filter === 'all' 
+    ? projects 
+    : projects.filter(p => {
+        if (filter === 'Commercial') return p.category === 'Commercial' || (p.category && p.category.includes('SPORTS')) || (p.category && p.category.includes('Commercial'));
+        if (filter === 'Plotting') return p.category === 'Plotting' || (p.category && p.category.toLowerCase().includes('plotting')) || (p.tag && p.tag.toLowerCase().includes('plotting'));
+        return p.category === filter;
+      });
+
+  if (list.length === 0) {
+    grid.innerHTML = `
+      <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; border: 1px dashed var(--line); border-radius: 4px; background: rgba(28,24,20,0.4);">
+        <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--ivory); margin-bottom: 8px;">Upcoming ${filter} Projects</p>
+        <p style="font-size: 0.88rem; color: var(--ivory-dim); max-width: 500px; margin: 0 auto;">Master planning and ${filter.toLowerCase()} projects are currently in development & site planning. Connect with our principal architects.</p>
+        <a href="contact.html" class="btn-primary" style="margin-top: 20px; display: inline-block;">Enquire About Plotting Projects →</a>
+      </div>
+    `;
+    return;
+  }
   list.forEach((p, i) => {
     const card = document.createElement(p.placeholder ? 'div' : 'a');
     if(!p.placeholder){

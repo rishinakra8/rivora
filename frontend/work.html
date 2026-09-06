@@ -75,6 +75,7 @@
         <button class="filter-btn" data-filter="Residential">Residential</button>
         <button class="filter-btn" data-filter="Commercial">Commercial</button>
         <button class="filter-btn" data-filter="Hospitality">Hospitality</button>
+        <button class="filter-btn" data-filter="Plotting">Plotting</button>
       </div>
       <div style="font-family:'Jost', sans-serif; font-size:0.75rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--brass-light);" id="projectCount">
         Showing 8 Projects
@@ -123,10 +124,27 @@
     if (!grid) return;
     grid.innerHTML = '';
 
-    const list = filter === 'all' ? projectsList : projectsList.filter(p => p.category === filter || (filter === 'Commercial' && (p.category.includes('Commercial') || p.category.includes('SPORTS'))));
+    const list = filter === 'all' 
+      ? projectsList 
+      : projectsList.filter(p => {
+          if (filter === 'Commercial') return p.category === 'Commercial' || (p.category && p.category.includes('SPORTS')) || (p.category && p.category.includes('Commercial'));
+          if (filter === 'Plotting') return p.category === 'Plotting' || (p.category && p.category.toLowerCase().includes('plotting')) || (p.tag && p.tag.toLowerCase().includes('plotting'));
+          return p.category === filter;
+        });
     
     if (countEl) {
       countEl.textContent = `Showing ${list.length} ${list.length === 1 ? 'Project' : 'Projects'}`;
+    }
+
+    if (list.length === 0) {
+      grid.innerHTML = `
+        <div style="grid-column: 1 / -1; text-align: center; padding: 70px 24px; border: 1px dashed var(--line); border-radius: 4px; background: rgba(28,24,20,0.4);">
+          <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--ivory); margin-bottom: 8px;">Upcoming ${filter} Projects</p>
+          <p style="font-size: 0.9rem; color: var(--ivory-dim); max-width: 520px; margin: 0 auto;">Our bespoke plotting and master planning projects are currently in development & execution. Contact our team to view active plot layouts and discuss development partnerships.</p>
+          <a href="contact.html" class="btn-primary" style="margin-top: 24px; display: inline-block;">Enquire About Plotting Projects →</a>
+        </div>
+      `;
+      return;
     }
 
     list.forEach(p => {
