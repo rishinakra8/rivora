@@ -1,442 +1,698 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rivora Design Studio — Turnkey Luxury Interiors &amp; Architecture</title>
-<meta name="description" content="Rivora Design Studio is an architect-led practice designing and executing luxury architecture &amp; interiors from first sketch to final key handover for homes, workspaces and hospitality pan India and globally.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@400;500;600&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
-<link rel="icon" type="image/png" href="images/logo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rivora Design Studio — Architecture, Interior Design & Turnkey Execution</title>
+  <meta name="description" content="Rivora Design Studio is a premier architectural design, turnkey interior fit-out, and spatial visualization studio based in Gurgaon, Delhi NCR. We transform concept blueprints into built reality with locked BOQs and uncompromising precision.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Syne:wght@400;500;600;700;800&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 <body>
 
-<!-- ============ PRELOADER ============ -->
-<div id="preloader" class="preloader">
-  <div class="preloader-inner">
-    <img src="images/logo.png" alt="Rivora Design Studio Logo" class="preloader-logo-img">
-    <div class="preloader-title">RIVORA</div>
-    <div class="preloader-line"><div class="preloader-progress"></div></div>
+  <!-- ============ PRELOADER ============ -->
+  <div id="preloader" class="u-preloader">
+    <div class="preloader-inner">
+      <img src="images/logo.png" alt="Rivora Design Studio Logo" class="preloader-logo-img">
+      <div class="preloader-title">RIVORA</div>
+      <div class="u-subheading-m" style="color:var(--brass-light); letter-spacing:0.25em;">Design Studio</div>
+      <div class="preloader-line"><div class="preloader-progress"></div></div>
+    </div>
   </div>
-</div>
 
-<!-- ============ NAV ============ -->
-<header id="siteHeader">
-  <div class="navwrap">
-    <a href="/" class="brandmark">
-      <img src="images/logo.png" alt="Rivora Design Studio Logo" class="brand-logo-img">
-      <span class="brand-type">
-        <span class="r-name">RIVORA</span>
-        <span class="r-sub">Design Studio</span>
-      </span>
+  <!-- ============ FLOATING NAVBAR ============ -->
+  <header class="navbar" id="siteNavbar">
+    <div class="u-container navbar_container">
+      <a href="/" class="navbar_logo_wrapper">
+        <img src="images/logo.png" alt="Rivora Design Studio Logo" class="brand-logo-img">
+        <span class="brand-type">
+          <span class="r-name">RIVORA</span>
+          <span class="r-sub">Design Studio</span>
+        </span>
+      </a>
+
+      <nav class="navbar_nav_wrapper" id="mainNav">
+        <ul class="navbar_nav">
+          <li class="navbar_nav_item"><a href="/" class="navbar_nav_link active">Home</a></li>
+          <li class="navbar_nav_item"><a href="work.html" class="navbar_nav_link">Portfolio</a></li>
+          <li class="navbar_nav_item nav_dd">
+            <div class="navbar_nav_link nav_dd_toggle">
+              <span>Services</span>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 13.0625L5 8.0625L6.0625 7L10 10.9375L13.9375 7L15 8.0625L10 13.0625Z"/></svg>
+            </div>
+            <div class="nav_dd_menu">
+              <a href="services.html" class="nav_dd_item">All Design Services</a>
+              <a href="work.html?filter=Residential" class="nav_dd_item">Residential Architecture</a>
+              <a href="work.html?filter=Commercial" class="nav_dd_item">Commercial & Sports Clubs</a>
+              <a href="work.html?filter=Hospitality" class="nav_dd_item">Hospitality & Dining</a>
+              <a href="work.html?filter=Plotting" class="nav_dd_item">Plotting & Master Planning</a>
+            </div>
+          </li>
+          <li class="navbar_nav_item"><a href="studio.html" class="navbar_nav_link">Studio</a></li>
+          <li class="navbar_nav_item"><a href="testimonials.html" class="navbar_nav_link">Testimonials</a></li>
+          <li class="navbar_nav_item"><a href="careers.html" class="navbar_nav_link">Careers</a></li>
+          <li class="navbar_nav_item"><a href="contact.html" class="navbar_nav_link">Contact</a></li>
+        </ul>
+
+        <div class="navbar_cta_group">
+          <a href="contact.html" class="u-btn u-btn-glass">
+            <div class="u-btn-front">Schedule Call</div>
+            <div class="u-btn-back">Schedule Call</div>
+          </a>
+          <a href="#enquiry" class="u-btn u-btn-white">
+            <div class="u-btn-front">Discuss Project</div>
+            <div class="u-btn-back">Discuss Project</div>
+          </a>
+        </div>
+      </nav>
+
+      <button class="burger_btn" id="burgerToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Overlay Menu -->
+  <div class="mobile_menu" id="mobileDrawer">
+    <a href="/" class="mobile_menu_link">Home</a>
+    <a href="work.html" class="mobile_menu_link">Portfolio</a>
+    <a href="services.html" class="mobile_menu_link">Services</a>
+    <a href="studio.html" class="mobile_menu_link">Studio</a>
+    <a href="testimonials.html" class="mobile_menu_link">Testimonials</a>
+    <a href="careers.html" class="mobile_menu_link">Careers</a>
+    <a href="contact.html" class="mobile_menu_link">Contact</a>
+    <a href="#enquiry" class="u-btn u-btn-brass" style="margin-top:20px;">
+      <div class="u-btn-front">Start A Project</div>
+      <div class="u-btn-back">Start A Project</div>
     </a>
-    <nav class="links">
-      <a href="services.html">Services</a>
-      <a href="work.html">Work</a>
-      <a href="studio.html">Studio</a>
-      <a href="testimonials.html">Testimonials</a>
-      <a href="careers.html">Careers</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <a href="contact.html" class="nav-cta">Enquire</a>
-    <button class="burger" id="burgerBtn" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
   </div>
-</header>
 
-<div class="mobile-menu" id="mobileMenu">
-  <a href="services.html">Services</a>
-  <a href="work.html">Work</a>
-  <a href="studio.html">Studio</a>
-  <a href="testimonials.html">Testimonials</a>
-  <a href="careers.html">Careers</a>
-  <a href="contact.html">Enquire</a>
-</div>
-
-<!-- ============ HERO ============ -->
-<section class="hero" id="home">
-  <div class="wrap hero-grid">
-    <div class="hero-copy">
-      <span class="eyebrow">Architecture, Interior Design &amp; Build — Pan India &amp; Globally</span>
-      <h1>Spaces built once, <em>built right.</em></h1>
-      <p>Rivora Design Studio is an architect-led practice designing and executing luxury architecture &amp; interiors — from first sketch to final key handover — for homes, workspaces and hospitality pan India and globally.</p>
-      <div class="hero-actions">
-        <a href="work.html" class="btn-primary">View Our Work</a>
-        <a href="contact.html" class="btn-ghost">Start a Project →</a>
+  <!-- ============ HERO SECTION ============ -->
+  <section class="section_hero">
+    <div class="hero_bg">
+      <img src="images/projects/sesh sports and fitness/1.png" alt="Rivora Architecture Showcase" />
+    </div>
+    <div class="hero_overlay"></div>
+    <div class="u-container hero_content">
+      <div class="hero_tag">
+        <span class="eyebrow">Architectural &amp; Spatial Design Studio</span>
+      </div>
+      <h1 class="u-h1 hero_heading">Bring your architectural spaces to life with <span class="serif">world-class design &amp; execution.</span></h1>
+      <p class="hero_subtext">Rivora is a turnkey architecture, luxury interior fit-out, and master planning practice based in Gurgaon, NCR. We bridge visionary concept evolution with precision on-site construction.</p>
+      <div class="hero_btns">
+        <a href="#work" class="u-btn u-btn-glass">
+          <div class="u-btn-front">Explore Portfolio</div>
+          <div class="u-btn-back">Explore Portfolio</div>
+        </a>
+        <a href="#enquiry" class="u-btn u-btn-brass">
+          <div class="u-btn-front">Start Project</div>
+          <div class="u-btn-back">Start Project</div>
+        </a>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="hero-blueprint" aria-hidden="true">
-    <svg viewBox="0 0 500 420" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect class="bp-line" x="40" y="40" width="420" height="340" pathLength="100" stroke-dasharray="100" />
-      <line class="bp-line" x1="230" y1="40" x2="230" y2="230" pathLength="100" stroke-dasharray="100" />
-      <line class="bp-line" x1="230" y1="230" x2="460" y2="230" pathLength="100" stroke-dasharray="100" />
-      <line class="bp-line dim" x1="40" y1="300" x2="230" y2="300" pathLength="100" stroke-dasharray="100" />
-      <path class="bp-line" d="M110 40 A70 70 0 0 1 40 110" pathLength="100" stroke-dasharray="100" />
-      <line class="bp-line dim" x1="110" y1="40" x2="110" y2="90" pathLength="100" stroke-dasharray="100" />
-      <rect class="bp-line dim" x="270" y="270" width="130" height="70" pathLength="100" stroke-dasharray="100" />
-      <line class="bp-line" x1="270" y1="305" x2="400" y2="305" pathLength="100" stroke-dasharray="100" />
-      <circle class="bp-fill" cx="80" cy="260" r="3" />
-      <circle class="bp-fill" cx="330" cy="130" r="3" />
-      <path class="bp-line dim" d="M20 40 L20 380 M14 40 L26 40 M14 380 L26 380" pathLength="100" stroke-dasharray="100" />
-    </svg>
-  </div>
-
-  <div class="scroll-cue">
-    <div class="cue-line"></div>
-    <span>Scroll to explore</span>
-  </div>
-</section>
-
-<!-- ============ SERVICES SUMMARY ============ -->
-<section class="services" id="services">
-  <div class="wrap section-pad">
-    <div class="section-head reveal" style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:20px;">
-      <div>
-        <span class="eyebrow">What We Do</span>
-        <h2>Comprehensive spatial design, concept to execution.</h2>
-        <p>Architect-led disciplines integrated into a single seamless project workflow.</p>
-      </div>
-      <div>
-        <a href="services.html" class="btn-ghost">Explore All Services →</a>
-      </div>
-    </div>
-
-    <div class="svc-grid reveal" id="servicesGrid"></div>
-  </div>
-</section>
-
-<!-- ============ WORK / PORTFOLIO ============ -->
-<section class="work" id="work">
-  <div class="wrap section-pad">
-    <div class="section-head reveal" style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:20px;">
-      <div>
-        <span class="eyebrow">Selected Works</span>
-        <h2>Spaces crafted with character and precision.</h2>
-        <p>A selection of residential, commercial, and hospitality projects across Delhi NCR and beyond.</p>
-      </div>
-      <div class="work-filter-bar">
-        <div class="filter-group" id="filterBar">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="Residential">Residential</button>
-          <button class="filter-btn" data-filter="Commercial">Commercial</button>
-          <button class="filter-btn" data-filter="Hospitality">Hospitality</button>
-          <button class="filter-btn" data-filter="Plotting">Plotting</button>
+  <!-- ============ FEATURED PROJECTS ============ -->
+  <section class="section_portfolio" id="work">
+    <div class="u-container-wide">
+      <div class="section_head_bloom">
+        <div class="title_group">
+          <span class="eyebrow">Selected Works</span>
+          <h2 class="u-h2" style="margin-top:8px;">Spaces crafted with <span class="serif">character &amp; precision.</span></h2>
+          <p style="color:var(--ivory-dim); margin-top:12px; font-size:1.02rem;">A curated showcase of residential estates, commercial hubs, hospitality destinations, and master planning studies across India.</p>
         </div>
-      </div>
-    </div>
-
-    <div class="work-grid reveal" id="workGrid"></div>
-
-    <div style="text-align:center; margin-top:50px;" class="reveal">
-      <a href="work.html" class="btn-primary">View Full Portfolio (8 Projects) →</a>
-    </div>
-
-  </div>
-</section>
-
-<!-- ============ PROCESS SUMMARY ============ -->
-<section class="process" id="process">
-  <div class="wrap section-pad">
-    <div class="section-head reveal" style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:20px;">
-      <div>
-        <span class="eyebrow">How We Work</span>
-        <h2>One studio, four stages, zero handoffs.</h2>
-        <p>Because design and construction sit under one roof, every stage below is delivered by the same team that drew the first sketch.</p>
-      </div>
-      <div>
-        <a href="studio.html#process" class="btn-ghost">Learn More →</a>
-      </div>
-    </div>
-
-    <div class="process-list reveal">
-      <div class="process-row">
-        <span class="pnum">01</span>
-        <h3>Concept &amp; Brief</h3>
-        <p>Site study, brief and budget alignment, followed by spatial planning and a design direction — mood, material and layout — presented for sign-off before a single drawing is finalised.</p>
-      </div>
-      <div class="process-row">
-        <span class="pnum">02</span>
-        <h3>Design &amp; BOQ</h3>
-        <p>Detailed working drawings, 3D visualisation, and a fixed Bill of Quantities covering civil, MEP, furniture and finishes — so the final cost is known before construction begins.</p>
-      </div>
-      <div class="process-row">
-        <span class="pnum">03</span>
-        <h3>Build &amp; Supervise</h3>
-        <p>In-house execution with dedicated site supervision, weekly progress reviews and quality checks at every stage — from structural changes to the last coat of paint.</p>
-      </div>
-      <div class="process-row">
-        <span class="pnum">04</span>
-        <h3>Handover</h3>
-        <p>Snag-free handover with complete documentation, warranty terms and a maintenance guide — the space is move-in ready, exactly as designed.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ TESTIMONIALS ============ -->
-<section class="testimonials section-pad" id="testimonials">
-  <div class="wrap">
-    <div class="section-head reveal" style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:20px;">
-      <div>
-        <span class="eyebrow">Client Endorsements</span>
-        <h2 style="font-size:clamp(1.8rem,3.2vw,2.6rem);">What our clients say about working with us.</h2>
-        <p style="margin-top:10px;">Real experiences from homeowners, commercial leaders, and hospitality partners across India.</p>
-      </div>
-      <div>
-        <a href="testimonials.html" class="btn-ghost">View All Reviews &amp; Stories →</a>
-      </div>
-    </div>
-
-    <!-- Slider Carousel Container -->
-    <div class="testi-slider-wrap reveal">
-      <div class="testi-slider-viewport">
-        <div class="testi-slider-track" id="testiSliderTrack">
-          <!-- Slide 1: Sesh Sports N Fitness -->
-          <div class="testi-slide">
-            <div class="testi-card">
-              <div>
-                <div class="testi-quote-icon">“</div>
-                <p class="testi-text">Rivora brought an unmatched level of design rigour and execution speed to Sesh Sports N Fitness. Having architecture, interiors, and turnkey contracting under one roof ensured zero compromises from concept renders to opening day.</p>
-              </div>
-              <div class="testi-author">
-                <span class="testi-name">Sesh Sports N Fitness</span>
-                <span class="testi-project">Large-Format Commercial &amp; Fitness Arena · Gurgaon</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 2: Dheeraj Residence -->
-          <div class="testi-slide">
-            <div class="testi-card">
-              <div>
-                <div class="testi-quote-icon">“</div>
-                <p class="testi-text">The team's attention to architectural detailing, spatial flow, and material honesty turned our vision into a timeless home. Their transparency on timelines and locked BOQ made the entire execution smooth and stress-free.</p>
-              </div>
-              <div class="testi-author">
-                <span class="testi-name">Private Residence Client</span>
-                <span class="testi-project">Dheeraj Residence · Bestech, Delhi - NCR</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 3: Spice Garden -->
-          <div class="testi-slide">
-            <div class="testi-card">
-              <div>
-                <div class="testi-quote-icon">“</div>
-                <p class="testi-text">From exterior facade articulation to ambient interior moods, Rivora crafted a distinctive spatial experience that our patrons love every single day. True architects who understand both aesthetics and business functionality.</p>
-              </div>
-              <div class="testi-author">
-                <span class="testi-name">Spice Garden Hospitality</span>
-                <span class="testi-project">Dining &amp; Hospitality Architecture · NCR</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 4: Kunal Residence -->
-          <div class="testi-slide">
-            <div class="testi-card">
-              <div>
-                <div class="testi-quote-icon">“</div>
-                <p class="testi-text">Rivora transformed our living space with exceptional craftsmanship and contemporary elegance. Every millimetre of joinery, lighting detail, and finish was delivered with complete fidelity to the original 3D renders.</p>
-              </div>
-              <div class="testi-author">
-                <span class="testi-name">Kunal &amp; Family</span>
-                <span class="testi-project">Kunal Residence · Gurgaon, NCR</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 5: Rinku Goyal Commercial -->
-          <div class="testi-slide">
-            <div class="testi-card">
-              <div>
-                <div class="testi-quote-icon">“</div>
-                <p class="testi-text">Their architectural facade engineering and commercial spatial zoning maximized both functional tenant value and aesthetic street prominence. A reliable practice with immense technical discipline.</p>
-              </div>
-              <div class="testi-author">
-                <span class="testi-name">Commercial Complex Developer</span>
-                <span class="testi-project">Commercial Complex · Bhiwadi, NCR</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 6: Luv Residence -->
-          <div class="testi-slide">
-            <div class="testi-card">
-              <div>
-                <div class="testi-quote-icon">“</div>
-                <p class="testi-text">Working with Ar. Rishi Nakra, Ar. Shreshtha Shandilya and the Rivora team was a pleasure. Their ability to balance luxury aesthetics with day-to-day functional practicality gave us a home that feels peaceful and deeply personal.</p>
-              </div>
-              <div class="testi-author">
-                <span class="testi-name">Luv &amp; Family</span>
-                <span class="testi-project">Luv Residence · Gurgaon, NCR</span>
-              </div>
-            </div>
-          </div>
+        <div class="portfolio_filter_bar" id="portfolioTabs">
+          <button class="filter_btn active" data-filter="all">All Projects</button>
+          <button class="filter_btn" data-filter="Residential">Residential</button>
+          <button class="filter_btn" data-filter="Commercial">Commercial</button>
+          <button class="filter_btn" data-filter="Hospitality">Hospitality</button>
+          <button class="filter_btn" data-filter="Plotting">Plotting</button>
         </div>
       </div>
 
-      <!-- Slider Controls -->
-      <div class="testi-controls">
-        <div class="testi-dots" id="testiSliderDots"></div>
-        <div class="testi-arrows">
-          <button class="testi-arrow-btn" id="testiPrevBtn" aria-label="Previous testimonials">←</button>
-          <button class="testi-arrow-btn" id="testiNextBtn" aria-label="Next testimonials">→</button>
+      <div class="portfolio_grid" id="featuredGrid">
+        <!-- 1. Sesh Sports N Fitness -->
+        <a href="project.html?id=sesh-sports-and-fitness" class="portfolio_project wide" data-category="Commercial Plotting">
+          <img src="images/projects/sesh sports and fitness/1.png" alt="Sesh Sports N Fitness Arena" class="portfolio_project_img" />
+          <div class="portfolio_project_overlay"></div>
+          <div class="portfolio_project_info">
+            <div class="project_title_box">
+              <span class="portfolio_project_cat">SPORTS &amp; RECREATION | SPORTS CLUB · 2.8 ACRE · GURGAON NCR</span>
+              <h3 class="portfolio_project_title">Sesh Sports N Fitness</h3>
+            </div>
+            <div class="project_view_tag">View Project ↗</div>
+          </div>
+        </a>
+
+        <!-- 2. Dheeraj Residence -->
+        <a href="project.html?id=dheeraj-residence" class="portfolio_project" data-category="Residential">
+          <img src="images/projects/DHEERAJ RESIDENCE_ BESTECH/1.jpg" alt="Dheeraj Residence" class="portfolio_project_img" />
+          <div class="portfolio_project_overlay"></div>
+          <div class="portfolio_project_info">
+            <div class="project_title_box">
+              <span class="portfolio_project_cat">RESIDENTIAL · ARCHITECTURE &amp; ELEVATION · BESTECH NCR</span>
+              <h3 class="portfolio_project_title">Dheeraj Residence</h3>
+            </div>
+            <div class="project_view_tag">View Project ↗</div>
+          </div>
+        </a>
+
+        <!-- 3. Spice Garden -->
+        <a href="project.html?id=spice-garden" class="portfolio_project" data-category="Hospitality">
+          <img src="images/projects/SPICE GARDEN/RENDERS/render 1.png" alt="Spice Garden Hospitality" class="portfolio_project_img" />
+          <div class="portfolio_project_overlay"></div>
+          <div class="portfolio_project_info">
+            <div class="project_title_box">
+              <span class="portfolio_project_cat">HOSPITALITY · DINING ARCHITECTURE · NCR INDIA</span>
+              <h3 class="portfolio_project_title">Spice Garden</h3>
+            </div>
+            <div class="project_view_tag">View Project ↗</div>
+          </div>
+        </a>
+
+        <!-- 4. Kunal Residence -->
+        <a href="project.html?id=kunal-residence" class="portfolio_project tall" data-category="Residential">
+          <img src="images/projects/KUNAL RESIDENCE/3D VIEW/1.png" alt="Kunal Residence" class="portfolio_project_img" />
+          <div class="portfolio_project_overlay"></div>
+          <div class="portfolio_project_info">
+            <div class="project_title_box">
+              <span class="portfolio_project_cat">RESIDENTIAL INTERIOR · GURGAON</span>
+              <h3 class="portfolio_project_title">Kunal Residence</h3>
+            </div>
+            <div class="project_view_tag">View ↗</div>
+          </div>
+        </a>
+
+        <!-- 5. Luv Residence -->
+        <a href="project.html?id=luv-residence" class="portfolio_project" data-category="Residential">
+          <img src="images/projects/LUV RESIDENCE/3D VIEW/L2.png" alt="Luv Residence" class="portfolio_project_img" />
+          <div class="portfolio_project_overlay"></div>
+          <div class="portfolio_project_info">
+            <div class="project_title_box">
+              <span class="portfolio_project_cat">RESIDENTIAL · GURGAON NCR</span>
+              <h3 class="portfolio_project_title">Luv Residence</h3>
+            </div>
+            <div class="project_view_tag">View Project ↗</div>
+          </div>
+        </a>
+
+        <!-- 6. Rinku Goyal Commercial -->
+        <a href="project.html?id=rinku-goyal-commercial" class="portfolio_project" data-category="Commercial">
+          <img src="images/projects/RINKU GOYAL_COMMERCIAL BHIWADI/E1.png" alt="Commercial Complex" class="portfolio_project_img" />
+          <div class="portfolio_project_overlay"></div>
+          <div class="portfolio_project_info">
+            <div class="project_title_box">
+              <span class="portfolio_project_cat">COMMERCIAL COMPLEX · BHIWADI NCR</span>
+              <h3 class="portfolio_project_title">Commercial Complex</h3>
+            </div>
+            <div class="project_view_tag">View Project ↗</div>
+          </div>
+        </a>
+
+        <!-- 7. Renders Portfolio -->
+        <a href="project.html?id=renders" class="portfolio_project wide" data-category="Residential Commercial Hospitality">
+          <img src="images/projects/Renders/Exterior/Elevation 1/1.png" alt="Architectural Renders Portfolio" class="portfolio_project_img" />
+          <div class="portfolio_project_overlay"></div>
+          <div class="portfolio_project_info">
+            <div class="project_title_box">
+              <span class="portfolio_project_cat">ARCHITECTURAL VISUALISATION · 3D RENDERS &amp; LANDSCAPE</span>
+              <h3 class="portfolio_project_title">Visualisation Portfolio</h3>
+            </div>
+            <div class="project_view_tag">View Portfolio ↗</div>
+          </div>
+        </a>
+      </div>
+
+      <div style="text-align:center; margin-top:50px;">
+        <a href="work.html" class="u-btn u-btn-black">
+          <div class="u-btn-front">View Full 8 Projects Gallery →</div>
+          <div class="u-btn-back">View Full 8 Projects Gallery →</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES SHOWCASE ============ -->
+  <section class="section_services" id="services">
+    <div class="u-container-wide">
+      <div class="section_head_bloom">
+        <div class="title_group">
+          <span class="eyebrow">Studio Capabilities</span>
+          <h2 class="u-h2" style="margin-top:8px;">We create spaces and visuals that <span class="serif">elevate architectural ideas.</span></h2>
+        </div>
+        <a href="services.html" class="u-btn u-btn-glass">
+          <div class="u-btn-front">All Services</div>
+          <div class="u-btn-back">All Services</div>
+        </a>
+      </div>
+
+      <div class="services_grid">
+        <!-- Service 1 -->
+        <div class="services_card">
+          <img src="images/projects/sesh sports and fitness/ELEVATION.png" alt="Architecture & Master Planning" class="services_card_bg" />
+          <div class="services_card_gradient"></div>
+          <div class="services_card_top">
+            <div class="services_card_num">01</div>
+          </div>
+          <div class="services_card_content">
+            <h3 class="services_card_title">Architecture &amp; Plotting</h3>
+            <p class="services_card_desc">Comprehensive architectural blueprints, elevation design, spatial zoning, and master plotting layouts for residences &amp; commercial estates.</p>
+            <a href="services.html" class="services_btn_text">Explore Scope ↗</a>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="services_card">
+          <img src="images/projects/KUNAL RESIDENCE/3D VIEW/1.png" alt="Turnkey Interior Fit-Outs" class="services_card_bg" />
+          <div class="services_card_gradient"></div>
+          <div class="services_card_top">
+            <div class="services_card_num">02</div>
+          </div>
+          <div class="services_card_content">
+            <h3 class="services_card_title">Turnkey Interior Fit-Outs</h3>
+            <p class="services_card_desc">Luxury interior transformations with locked BOQs, custom millwork, curated lighting palettes, and seamless site contracting.</p>
+            <a href="services.html" class="services_btn_text">Explore Scope ↗</a>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="services_card">
+          <img src="images/projects/sesh sports and fitness/1.png" alt="Sports & Commercial Hubs" class="services_card_bg" />
+          <div class="services_card_gradient"></div>
+          <div class="services_card_top">
+            <div class="services_card_num">03</div>
+          </div>
+          <div class="services_card_content">
+            <h3 class="services_card_title">Commercial &amp; Sports Arenas</h3>
+            <p class="services_card_desc">Large-format fitness destinations, retail flagships, dance studios, and dining venues designed for high community impact.</p>
+            <a href="services.html" class="services_btn_text">Explore Scope ↗</a>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="services_card">
+          <img src="images/projects/Renders/Exterior/Elevation 1/1.png" alt="3D Visualization" class="services_card_bg" />
+          <div class="services_card_gradient"></div>
+          <div class="services_card_top">
+            <div class="services_card_num">04</div>
+          </div>
+          <div class="services_card_content">
+            <h3 class="services_card_title">3D Visualization &amp; CGI</h3>
+            <p class="services_card_desc">Photorealistic exterior &amp; interior rendering, daylight studies, and walkthrough simulations to validate design decisions.</p>
+            <a href="services.html" class="services_btn_text">Explore Scope ↗</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ============ STUDIO / ABOUT ============ -->
-<section class="section-pad" id="studio">
-  <div class="wrap studio-grid">
-    <div class="studio-visual reveal">
-      <img src="images/about/rishi-nakra.jpg" alt="Ar. Rishi Nakra — Founder &amp; Principal Architect, Rivora Design Studio" class="studio-portrait">
-      <div class="studio-scrim"></div>
-      <span class="cap">Ar. Rishi Nakra &bull; Founder &amp; Principal Architect</span>
-    </div>
-    <div class="studio-copy reveal">
-      <span class="eyebrow">About The Studio</span>
-      <h2 style="margin-top:20px; font-size:clamp(1.8rem,3vw,2.5rem); font-weight:400;">Design with intention. Built with discipline.</h2>
-      <p>Rivora Design Studio is a Gurgaon-based interior design and build practice creating distinctive residential, hospitality, and commercial spaces across india and serving globally.</p>
-      <p>Rivora was born from a personal passion for design and a belief in doing things with honesty, trust, and intention.</p>
-      <p>For us, design is more than creating beautiful spaces. It is about creating something distinctive — something that has character, creates an impression, and becomes a meaningful part of the lives of the people who experience it.</p>
-      <p><strong>Rivora is where passion for design meets the discipline of execution — creating spaces that are unique, enduring, and made to leave an impact.</strong></p>
-      <div style="margin-top:24px;">
-        <a href="studio.html" class="btn-ghost">Read Full Studio Story &amp; Leadership →</a>
+  <!-- ============ STUDIO PHILOSOPHY & METRICS ============ -->
+  <section class="section_about" id="studio">
+    <div class="u-container">
+      <div class="about_statement">
+        <span class="eyebrow" style="margin-bottom:14px;">Studio Philosophy</span>
+        <h2>By combining architectural rigour with <span class="serif">meticulous on-site execution,</span> we ensure every space reflects a thoughtful and collaborative design philosophy shaped by your ambition.</h2>
       </div>
-      <div class="studio-signature" style="display:flex; gap:36px; flex-wrap:wrap; margin-top:32px;">
+
+      <div class="about_nums_bar">
+        <div class="about_num_item">
+          <div class="about_num_title">100+</div>
+          <div class="about_num_label">Projects Completed</div>
+        </div>
+        <div class="about_num_item">
+          <div class="about_num_title">50+</div>
+          <div class="about_num_label">Direct Clients</div>
+        </div>
+        <div class="about_num_item">
+          <div class="about_num_title">10+</div>
+          <div class="about_num_label">Years Experience</div>
+        </div>
+        <div class="about_num_item">
+          <div class="about_num_title">100%</div>
+          <div class="about_num_label">Locked BOQ Delivery</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY WORK WITH US? / ADVANTAGES ============ -->
+  <section class="section_advantages" id="advantages">
+    <div class="u-container-wide">
+      <div class="advantages_layout">
         <div>
-          <div class="name">Ar. Rishi Nakra</div>
-          <div class="role">Founder &amp; Principal Architect</div>
+          <span class="eyebrow" style="margin-bottom:14px;">Why Rivora</span>
+          <h2 class="u-h2" style="margin-bottom:32px;">Why work with <span class="serif">our studio?</span></h2>
+
+          <div class="advantages_list">
+            <!-- 01 -->
+            <div class="advantage_item active" data-visual="images/projects/sesh sports and fitness/1.png">
+              <div class="advantage_header">
+                <div class="advantage_title_box">
+                  <span class="advantage_num">01</span>
+                  <h3 class="advantage_heading">Architectural Rigour &amp; Complex Spatial Logic</h3>
+                </div>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="advantage_icon"><path d="M12 5v14M5 12h14"/></svg>
+              </div>
+              <div class="advantage_body">
+                <p>Co-founder &amp; Principal Architect Shreshtha Shandilya brings a distinguished background in high-end retail, hospitality developments, and the challenging geometries of memorials and museums — ensuring every layout has unmatched spatial depth.</p>
+              </div>
+            </div>
+
+            <!-- 02 -->
+            <div class="advantage_item" data-visual="images/projects/DHEERAJ RESIDENCE_ BESTECH/1.jpg">
+              <div class="advantage_header">
+                <div class="advantage_title_box">
+                  <span class="advantage_num">02</span>
+                  <h3 class="advantage_heading">Fast Delivery, Locked BOQ &amp; Zero Surprises</h3>
+                </div>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="advantage_icon"><path d="M12 5v14M5 12h14"/></svg>
+              </div>
+              <div class="advantage_body">
+                <p>We believe in absolute transparency. Our comprehensive bill of quantities (BOQ) is finalized and locked before on-site civil works begin, protecting you from unexpected cost escalations and schedule slips.</p>
+              </div>
+            </div>
+
+            <!-- 03 -->
+            <div class="advantage_item" data-visual="images/projects/SPICE GARDEN/RENDERS/render 1.png">
+              <div class="advantage_header">
+                <div class="advantage_title_box">
+                  <span class="advantage_num">03</span>
+                  <h3 class="advantage_heading">Complete Concept-to-Completion Execution</h3>
+                </div>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="advantage_icon"><path d="M12 5v14M5 12h14"/></svg>
+              </div>
+              <div class="advantage_body">
+                <p>Co-founder Rishi Nakra leads our site engineering and execution arm, ensuring what is rendered in high-definition CGI is built with precision craftsmanship, flawless joinery, and structural integrity.</p>
+              </div>
+            </div>
+
+            <!-- 04 -->
+            <div class="advantage_item" data-visual="images/projects/KUNAL RESIDENCE/3D VIEW/1.png">
+              <div class="advantage_header">
+                <div class="advantage_title_box">
+                  <span class="advantage_num">04</span>
+                  <h3 class="advantage_heading">Tailored Material Honesty &amp; Bespoke Luxury</h3>
+                </div>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="advantage_icon"><path d="M12 5v14M5 12h14"/></svg>
+              </div>
+              <div class="advantage_body">
+                <p>From Italian marbles and textured wall plasters to acoustically-engineered studio panelling and custom brass accents, every material is thoughtfully specified to age gracefully.</p>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <div class="advantages_visual">
+          <img id="advantageImg" src="images/projects/sesh sports and fitness/1.png" alt="Rivora Architecture Advantage Showcase" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="section_testimonials" id="testimonials">
+    <div class="u-container">
+      <div class="section_head_bloom">
+        <div class="title_group">
+          <span class="eyebrow">Client Feedback</span>
+          <h2 class="u-h2" style="margin-top:8px;">Trusted by visionaries, <span class="serif">homeowners &amp; developers.</span></h2>
+        </div>
+        <div class="testi_controls">
+          <button class="testi_btn" id="testiPrev" aria-label="Previous testimonial">←</button>
+          <button class="testi_btn" id="testiNext" aria-label="Next testimonial">→</button>
+        </div>
+      </div>
+
+      <div class="testi_carousel_wrapper">
+        <div class="testi_track" id="testiTrack">
+          <!-- Slide 1 -->
+          <div class="testi_slide">
+            <div class="testi_quote_mark">“</div>
+            <div class="testi_quote">Rivora brought an unmatched level of design rigour and execution speed to Sesh Sports N Fitness. Having architecture, interiors, and turnkey contracting under one roof ensured zero compromises from concept renders to opening day.</div>
+            <div class="testi_author_row">
+              <div class="testi_author_info">
+                <h4>Sesh Sports N Fitness</h4>
+                <p>Flagship Sports Arena · Gurgaon NCR</p>
+              </div>
+              <a href="project.html?id=sesh-sports-and-fitness" class="u-subheading-m" style="color:var(--brass-light);">View Project Specs ↗</a>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="testi_slide">
+            <div class="testi_quote_mark">“</div>
+            <div class="testi_quote">The team's attention to architectural detailing, spatial flow, and material honesty turned our vision into a timeless home. Their transparency on timelines and locked BOQ made the entire execution smooth and stress-free.</div>
+            <div class="testi_author_row">
+              <div class="testi_author_info">
+                <h4>Private Residence Client</h4>
+                <p>Dheeraj Residence · Bestech NCR</p>
+              </div>
+              <a href="project.html?id=dheeraj-residence" class="u-subheading-m" style="color:var(--brass-light);">View Project Specs ↗</a>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="testi_slide">
+            <div class="testi_quote_mark">“</div>
+            <div class="testi_quote">From the initial 3D visualization to site delivery, Rivora captured the exact ambiance we wanted for Spice Garden. Their spatial storytelling created a dining experience our patrons constantly praise.</div>
+            <div class="testi_author_row">
+              <div class="testi_author_info">
+                <h4>Spice Garden Hospitality</h4>
+                <p>Dining &amp; Landscape · NCR India</p>
+              </div>
+              <a href="project.html?id=spice-garden" class="u-subheading-m" style="color:var(--brass-light);">View Project Specs ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ SECTION ============ -->
+  <section class="section_faq" id="faq">
+    <div class="u-container">
+      <div class="faq_layout">
         <div>
-          <div class="name">Ar. Shreshtha Shandilya</div>
-          <div class="role">Co-Founder &amp; Principal Architect</div>
+          <span class="eyebrow" style="margin-bottom:14px;">Frequently Asked</span>
+          <h2 class="u-h2">You asked, <span class="serif">we answered.</span></h2>
+          <p style="color:var(--ivory-dim); margin-top:16px; font-size:1.02rem;">Have a specific project in mind? Explore how we structure architectural commissions, turnkey contracting, and timeline milestones.</p>
+          <a href="contact.html" class="u-btn u-btn-brass" style="margin-top:32px;">
+            <div class="u-btn-front">Ask A Question</div>
+            <div class="u-btn-back">Ask A Question</div>
+          </a>
+        </div>
+
+        <div class="faq_list">
+          <!-- FAQ 1 -->
+          <div class="faq_item active">
+            <div class="faq_item_header">
+              <h3 class="faq_item_title">What does Rivora's Turnkey Execution service include?</h3>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq_icon"><path d="M12 5v14M5 12h14"/></svg>
+            </div>
+            <div class="faq_item_body">
+              <p class="faq_item_text">Our turnkey service manages your project from the initial architectural drawings and 3D renders all the way to civil execution, MEP, custom millwork, procurement, and handover. You work with a single dedicated team with locked BOQs and guaranteed timelines.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq_item">
+            <div class="faq_item_header">
+              <h3 class="faq_item_title">How do you handle budget transparency and cost estimates?</h3>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq_icon"><path d="M12 5v14M5 12h14"/></svg>
+            </div>
+            <div class="faq_item_body">
+              <p class="faq_item_text">Before starting site execution, we prepare a line-itemized Bill of Quantities (BOQ) with material specifications, brands, and rates. Once approved, rates are locked so you have absolute predictability throughout construction.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq_item">
+            <div class="faq_item_header">
+              <h3 class="faq_item_title">Do you take on Plotting &amp; Master Planning projects?</h3>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq_icon"><path d="M12 5v14M5 12h14"/></svg>
+            </div>
+            <div class="faq_item_body">
+              <p class="faq_item_text">Yes. We specialize in large-scale plotting layouts, sports clubs (such as our 2.8 Acre Sesh Sports project), and mixed-use commercial developments across Delhi NCR, Haryana, Rajasthan, and nationwide.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq_item">
+            <div class="faq_item_header">
+              <h3 class="faq_item_title">Can we collaborate on architectural design &amp; 3D renders only?</h3>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="faq_icon"><path d="M12 5v14M5 12h14"/></svg>
+            </div>
+            <div class="faq_item_body">
+              <p class="faq_item_text">Absolutely. We regularly provide standalone architectural blueprints, facade elevation modeling, and high-resolution 3D CGI visualisation for clients and developers globally.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ============ CONTACT ============ -->
-<section class="contact section-pad" id="contact">
-  <div class="wrap contact-grid">
-    <div class="contact-copy reveal">
-      <span class="eyebrow">Start a Project</span>
-      <h2>Tell us about your space.</h2>
-      <p>Share a few details about your project and our team will get back to you within two working days with next steps.</p>
-      <div class="contact-details">
-        <div class="item">
-          <span class="label">Location</span>
-          Gurgaon, Delhi NCR &bull; Serving Globally
-        </div>
-        <div class="item">
-          <span class="label">Email</span>
-          <a href="mailto:rishi.rivora@gmail.com">rishi.rivora@gmail.com</a>
-        </div>
-        <div class="item">
-          <span class="label">Phone</span>
-          <a href="tel:+918875583347">+91 88755 83347</a>
-        </div>
+  <!-- ============ CTA BANNER ============ -->
+  <section class="section_cta">
+    <img src="images/projects/sesh sports and fitness/1.png" alt="Rivora Studio Backdrop" class="cta_bg_img" />
+    <div class="cta_overlay"></div>
+    <div class="u-container cta_content">
+      <span class="eyebrow" style="margin-bottom:16px;">Direct Consultation</span>
+      <h2 class="u-h1 cta_heading">Let’s talk about your <span class="serif">next project.</span></h2>
+      <p class="cta_text">Whether designing a luxury private residence, a flagship commercial destination, or a multi-acre master plan, our founders are ready to consult on your brief.</p>
+      <div class="hero_btns">
+        <a href="#enquiry" class="u-btn u-btn-white">
+          <div class="u-btn-front">Fill Project Brief</div>
+          <div class="u-btn-back">Fill Project Brief</div>
+        </a>
+        <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer" class="u-btn u-btn-glass">
+          <div class="u-btn-front">WhatsApp Studio</div>
+          <div class="u-btn-back">WhatsApp Studio</div>
+        </a>
       </div>
     </div>
+  </section>
 
-    <form class="contact-form reveal" id="contactForm">
-      <div class="form-row">
-        <div class="field">
-          <label for="cname">Your Name *</label>
-          <input type="text" id="cname" required placeholder="Full Name">
+  <!-- ============ CONSULTATION / ENQUIRY FORM ============ -->
+  <section class="section_enquiry" id="enquiry">
+    <div class="u-container">
+      <div class="enquiry_card">
+        <div style="text-align:center; margin-bottom:36px;">
+          <span class="eyebrow">Start A Project</span>
+          <h2 class="u-h2" style="margin-top:10px;">Share your <span class="serif">vision.</span></h2>
+          <p style="color:var(--ivory-dim); margin-top:8px; font-size:0.95rem;">Fill in your requirements below and our principal architect will connect with you within 24 hours.</p>
         </div>
-        <div class="field">
-          <label for="cemail">Email Address *</label>
-          <input type="email" id="cemail" required placeholder="name@domain.com">
-        </div>
+
+        <form id="homeEnquiryForm">
+          <div class="form_grid">
+            <div class="field_group">
+              <label for="cname">Your Name *</label>
+              <input type="text" id="cname" required placeholder="e.g. Rahul Sharma">
+            </div>
+            <div class="field_group">
+              <label for="cphone">Phone Number *</label>
+              <input type="tel" id="cphone" required placeholder="e.g. +91 98765 43210">
+            </div>
+            <div class="field_group">
+              <label for="cemail">Email Address *</label>
+              <input type="email" id="cemail" required placeholder="e.g. rahul@example.com">
+            </div>
+            <div class="field_group">
+              <label for="clocation">Project Location</label>
+              <input type="text" id="clocation" placeholder="e.g. Golf Course Rd, Gurgaon / South Delhi">
+            </div>
+            <div class="field_group">
+              <label for="ctype">Project Type</label>
+              <select id="ctype">
+                <option>Residential Architecture &amp; Interiors</option>
+                <option>Commercial &amp; Office Hub</option>
+                <option>Sports &amp; Fitness Arena</option>
+                <option>Plotting &amp; Master Planning</option>
+                <option>Hospitality &amp; Restaurant</option>
+                <option>3D Visualization &amp; Elevation</option>
+                <option>Other Bespoke Project</option>
+              </select>
+            </div>
+            <div class="field_group">
+              <label for="cbudget">Approx. Budget</label>
+              <select id="cbudget">
+                <option>₹25 Lacs – ₹50 Lacs</option>
+                <option>₹50 Lacs – ₹1 Crore</option>
+                <option>₹1 Crore – ₹2.5 Crores</option>
+                <option>₹2.5 Crores+</option>
+                <option>Flexible / To Discuss</option>
+              </select>
+            </div>
+            <div class="field_group full_width">
+              <label for="cmessage">Project Brief / Scope</label>
+              <textarea id="cmessage" rows="4" placeholder="Tell us about the plot/space area, current status, timelines, or any specific design ideas..."></textarea>
+            </div>
+          </div>
+
+          <div style="text-align:center; margin-top:32px;">
+            <button type="submit" class="u-btn u-btn-brass" style="width:100%; max-width:320px;">
+              <div class="u-btn-front">Submit Project Brief →</div>
+              <div class="u-btn-back">Submit Project Brief →</div>
+            </button>
+          </div>
+
+          <div id="formFeedback" class="form_status_msg success">
+            Thank you! Your project enquiry has been received. Our principal architects will reach out shortly.
+          </div>
+        </form>
       </div>
-
-      <div class="form-row">
-        <div class="field">
-          <label for="cphone">Phone / WhatsApp Number *</label>
-          <input type="tel" id="cphone" required placeholder="+91 98765 43210">
-        </div>
-        <div class="field">
-          <label for="clocation">Project Location *</label>
-          <input type="text" id="clocation" required placeholder="e.g. Golf Course Rd, Gurgaon / South Delhi">
-        </div>
-      </div>
-
-      <div class="form-row">
-        <div class="field">
-          <label for="ctype">Project Type</label>
-          <select id="ctype">
-            <option>Residential Interior</option>
-            <option>Commercial / Office</option>
-            <option>Hospitality</option>
-            <option>Plotting & Master Planning</option>
-            <option>Architectural Design</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="cbudget">Approx. Budget</label>
-          <select id="cbudget">
-            <option>₹25 Lacs – ₹50 Lacs</option>
-            <option>₹50 Lacs – ₹1 Crore</option>
-            <option>₹1 Crore – ₹2.5 Crores</option>
-            <option>₹2.5 Crores+</option>
-            <option>Flexible / To Discuss</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="field">
-        <label for="carea">Project Area / Size</label>
-        <input type="text" id="carea" placeholder="e.g. 3,500 sq ft / 4 BHK Penthouse / 12,000 sq ft Commercial">
-      </div>
-
-      <div class="field">
-        <label for="cmsg">Tell us about your project</label>
-        <textarea id="cmsg" placeholder="Location, size, timeline, specific brief..."></textarea>
-      </div>
-      <button type="submit">Submit Enquiry</button>
-    </form>
-  </div>
-</section>
-
-<!-- ============ FOOTER ============ -->
-<footer>
-  <div class="wrap footer-row">
-    <div class="brand-type">
-      <span class="r-name" style="font-size:1.05rem;">RIVORA</span>
-      <span class="r-sub" style="display:block;">Design Studio</span>
     </div>
-    <div class="footer-links">
-      <a href="work.html">Work</a>
-      <a href="services.html">Services</a>
-      <a href="studio.html">Studio</a>
-      <a href="careers.html">Careers</a>
-      <a href="contact.html">Contact</a>
-      <a href="https://www.instagram.com/rivora_designstudio/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-        Instagram
-      </a>
-      <a href="https://www.youtube.com/@rishinakra1938" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-        <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-        YouTube
-      </a>
-    </div>
-    <div class="footer-fine">© 2026 Rivora Design Studio. All rights reserved.</div>
-  </div>
-</footer>
+  </section>
 
-<script src="js/projects-data.js"></script>
-<script src="js/main.js"></script>
+  <!-- ============ MULTI-COLUMN LUXURY FOOTER ============ -->
+  <footer class="section_footer">
+    <div class="u-container-wide">
+      <div class="footer_grid">
+        <div class="footer_brand_col">
+          <div class="navbar_logo_wrapper">
+            <img src="images/logo.png" alt="Rivora Design Studio Logo" class="brand-logo-img">
+            <div class="brand-type">
+              <span class="r-name">RIVORA</span>
+              <span class="r-sub">Design Studio</span>
+            </div>
+          </div>
+          <p class="footer_brand_desc">A premier architecture, turnkey interior design, and spatial execution practice delivering bespoke spaces across Delhi NCR and globally.</p>
+          <div class="footer_socials">
+            <a href="https://www.instagram.com/rivora_designstudio/?hl=en" target="_blank" rel="noopener noreferrer" class="footer_social_icon" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://www.youtube.com/@rishinakra1938" target="_blank" rel="noopener noreferrer" class="footer_social_icon" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer_col_title">Navigation</div>
+          <ul class="footer_links">
+            <li><a href="/">Home</a></li>
+            <li><a href="work.html">Portfolio</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="studio.html">Studio &amp; Founders</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer_col_title">Services</div>
+          <ul class="footer_links">
+            <li><a href="work.html?filter=Residential">Residential Architecture</a></li>
+            <li><a href="work.html?filter=Commercial">Sports &amp; Commercial Hubs</a></li>
+            <li><a href="work.html?filter=Hospitality">Hospitality &amp; Dining</a></li>
+            <li><a href="work.html?filter=Plotting">Plotting &amp; Master Planning</a></li>
+            <li><a href="services.html">Turnkey Execution</a></li>
+            <li><a href="project.html?id=renders">3D Visualisation</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer_col_title">Contact &amp; Studio</div>
+          <ul class="footer_links">
+            <li><span style="color:var(--ivory);">Gurgaon, Delhi NCR, India</span></li>
+            <li><a href="mailto:info@rivoradesignstudio.com">info@rivoradesignstudio.com</a></li>
+            <li><a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer">+91 99999 99999</a></li>
+            <li><span style="color:var(--ivory-dim); font-size:0.82rem;">Mon – Sat: 10:00 AM – 7:00 PM</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer_bottom">
+        <div>© 2026 Rivora Design Studio. All rights reserved.</div>
+        <div>Gurgaon · Delhi NCR · Serving Pan India &amp; Globally</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/projects-data.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
