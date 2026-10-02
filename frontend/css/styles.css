@@ -367,8 +367,9 @@ section {
 }
 
 .brand-logo-img {
-  width: 36px;
-  height: 36px;
+  height: 42px;
+  width: auto;
+  max-width: 140px;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
