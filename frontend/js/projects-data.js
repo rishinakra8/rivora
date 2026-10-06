@@ -18,9 +18,10 @@ const PROJECTS = [
     area:        '2.8 Acre',
     scope:       'Architecture, Interior Design, Execution',
     description: 'A high-energy sports and fitness destination designed around movement, performance, and community — combining bold spatial gestures with precision detailing across gym, studio, café, and conference zones.',
-    cover:       'images/projects/sesh sports and fitness/1.png',
+    cover:       'images/projects/sesh sports and fitness/aerial-complex-real.jpg',
     gallery: [
-      // Master Plan & Facade Renders
+      // Completed Complex Aerial Photo & Renders
+      { src: 'images/projects/sesh sports and fitness/aerial-complex-real.jpg',            label: 'Aerial View — Completed Complex' },
       { src: 'images/projects/sesh sports and fitness/front facade.png',                   label: 'Front Facade' },
       { src: 'images/projects/sesh sports and fitness/cafe and back facade.png',           label: 'Café & Rear Facade' },
       { src: 'images/projects/sesh sports and fitness/Aerial View of Modern Soccer Complex.png', label: 'Aerial Soccer Complex' },
