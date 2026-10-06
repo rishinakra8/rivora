@@ -20,6 +20,12 @@ const PROJECTS = [
     description: 'A high-energy sports and fitness destination designed around movement, performance, and community — combining bold spatial gestures with precision detailing across gym, studio, café, and conference zones.',
     cover:       'images/projects/sesh sports and fitness/1.png',
     gallery: [
+      // Master Plan & Facade Renders
+      { src: 'images/projects/sesh sports and fitness/front facade.png',                   label: 'Front Facade' },
+      { src: 'images/projects/sesh sports and fitness/cafe and back facade.png',           label: 'Café & Rear Facade' },
+      { src: 'images/projects/sesh sports and fitness/Aerial View of Modern Soccer Complex.png', label: 'Aerial Soccer Complex' },
+      { src: 'images/projects/sesh sports and fitness/REALISTIC_SESH INDOOR.png',          label: 'Indoor Sports Arena' },
+      { src: 'images/projects/sesh sports and fitness/Jogging track.png',                  label: 'Jogging Track & Landscape' },
       // Overview renders
       { src: 'images/projects/sesh sports and fitness/1.png',               label: 'Overview' },
       { src: 'images/projects/sesh sports and fitness/2.png',               label: 'Overview' },
