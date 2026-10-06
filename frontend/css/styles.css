@@ -2081,17 +2081,42 @@ footer {
 .footer-social {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
 }
 
 .footer-social a {
-  color: var(--brass-light);
+  color: var(--ivory);
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.footer-social a:hover {
-  color: #ffffff;
+.footer-social .footer_social_icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--ink-3);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-social .footer_social_icon:hover {
+  background: var(--brass);
+  color: var(--ink);
+  border-color: var(--brass);
+  transform: translateY(-2px);
+}
+
+.footer-social svg {
+  display: block;
+  width: 17px;
+  height: 17px;
+}
+
+.footer-fine {
+  font-size: 0.8rem;
+  color: var(--ivory-muted);
 }
 
 .footer-copy {
