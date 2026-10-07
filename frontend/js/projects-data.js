@@ -202,30 +202,7 @@ const PROJECTS = [
     ]
   },
 
-  // ── 6. RINKU GOYAL COMMERCIAL ─────────────────────────────────────────────
-  {
-    id:          'rinku-goyal-commercial',
-    title:       'Commercial Complex',
-    location:    'Bhiwadi, NCR',
-    category:    'Commercial',
-    tag:         'Commercial',
-    size:        '',
-    year:        '2023',
-    area:        'N/A',
-    scope:       'Architectural Design · Elevation Design',
-    description: 'A multi-storey commercial complex designed for retail and professional use — the facade composition balances visual impact with practical legibility, using articulated bay rhythm and considered materiality.',
-    cover:       'images/projects/RINKU GOYAL_COMMERCIAL BHIWADI/E1.png',
-    gallery: [
-      { src: 'images/projects/RINKU GOYAL_COMMERCIAL BHIWADI/E1.png', label: 'Elevation' },
-      { src: 'images/projects/RINKU GOYAL_COMMERCIAL BHIWADI/E2.png', label: 'Elevation' },
-      { src: 'images/projects/RINKU GOYAL_COMMERCIAL BHIWADI/E3.png', label: 'Elevation' },
-      { src: 'images/projects/RINKU GOYAL_COMMERCIAL BHIWADI/E4.png', label: 'Elevation' },
-      { src: 'images/projects/RINKU GOYAL_COMMERCIAL BHIWADI/E5.png', label: 'Elevation' },
-      { src: 'images/projects/RINKU GOYAL_COMMERCIAL BHIWADI/E6.png', label: 'Elevation' },
-    ]
-  },
-
-  // ── 7. NAVEEN RESIDENCE ───────────────────────────────────────────────────
+  // ── 6. NAVEEN RESIDENCE ───────────────────────────────────────────────────
   {
     id:          'naveen-residence',
     title:       'Naveen Residence',
@@ -243,73 +220,5 @@ const PROJECTS = [
     ]
   },
 
-  // ── 8. RENDERS (Standalone Visualisation Portfolio) ───────────────────────
-  {
-    id:          'renders',
-    title:       'Renders Portfolio',
-    location:    'NCR, India',
-    category:    'Residential',
-    tag:         'Visualisation',
-    size:        'wide',
-    year:        '2024',
-    area:        'N/A',
-    scope:       'Architectural Visualisation · 3D Rendering · Landscape',
-    description: 'A curated collection of architectural and interior visualisations — demonstrating the full range of Rivora\'s rendering capability across exterior elevations, landscape design, and bespoke interior spaces.',
-    cover:       'images/projects/Renders/Exterior/Elevation 1/1.png',
-    gallery: [
-      // Exterior — Elevations
-      { src: 'images/projects/Renders/Exterior/Elevation 1/1.png',          label: 'Elevation' },
-      { src: 'images/projects/Renders/Exterior/Elevation 1/3.png',          label: 'Elevation' },
-      { src: 'images/projects/Renders/Exterior/Elevation 2/E1 Final R1.png', label: 'Elevation' },
-      { src: 'images/projects/Renders/Exterior/Elevation 2/E1 Final R3.png', label: 'Elevation' },
-      { src: 'images/projects/Renders/Exterior/Elevation 3/E1 R2 final.png', label: 'Elevation' },
-      { src: 'images/projects/Renders/Exterior/Elevation 4/E1. Final R1.png', label: 'Elevation' },
-      // Exterior — Landscape
-      { src: 'images/projects/Renders/Exterior/Landscape/Scene 1.png',      label: 'Landscape' },
-      { src: 'images/projects/Renders/Exterior/Landscape/Scene 2.png',      label: 'Landscape' },
-      { src: 'images/projects/Renders/Exterior/Landscape/Scene 3.png',      label: 'Landscape' },
-      { src: 'images/projects/Renders/Exterior/Landscape/Scene 5.png',      label: 'Landscape' },
-      { src: 'images/projects/Renders/Exterior/Landscape/Scene 7.png',      label: 'Landscape' },
-      { src: 'images/projects/Renders/Exterior/Landscape/Scene 8.png',      label: 'Landscape' },
-      { src: 'images/projects/Renders/Exterior/Landscape/Scene 11.png',     label: 'Landscape' },
-      { src: 'images/projects/Renders/Exterior/Landscape/Scene 20.png',     label: 'Landscape' },
-      { src: 'images/projects/Renders/Exterior/Landscape/Scene 24.png',     label: 'Landscape' },
-      { src: 'images/projects/Renders/Exterior/Landscape/Scene 30.png',     label: 'Landscape' },
-      // Interior — Bedrooms
-      { src: 'images/projects/Renders/Interior/Bedroom 1/Bed R1.png',       label: 'Bedroom' },
-      { src: 'images/projects/Renders/Interior/Bedroom 1/Bed R2.png',       label: 'Bedroom' },
-      { src: 'images/projects/Renders/Interior/Bedroom 1/Bed R3.png',       label: 'Bedroom' },
-      { src: 'images/projects/Renders/Interior/Bedroom 1/Bed R4.png',       label: 'Bedroom' },
-      { src: 'images/projects/Renders/Interior/Bedroom 2/Bed3 R1.png',      label: 'Bedroom' },
-      { src: 'images/projects/Renders/Interior/Bedroom 2/Bed3 R3.png',      label: 'Bedroom' },
-      { src: 'images/projects/Renders/Interior/Bedroom 3/2.jpg',            label: 'Bedroom' },
-      { src: 'images/projects/Renders/Interior/Bedroom 3/Bed1 R2.png',      label: 'Bedroom' },
-      { src: 'images/projects/Renders/Interior/Bedroom 3/Bed1 R3.png',      label: 'Bedroom' },
-      { src: 'images/projects/Renders/Interior/Bedroom 4/R1.png',           label: 'Bedroom' },
-      { src: 'images/projects/Renders/Interior/Bedroom 5/R1_inpainting04.png', label: 'Bedroom' },
-      { src: 'images/projects/Renders/Interior/Bedroom 5/R3.png',           label: 'Bedroom' },
-      // Interior — Dance Studio
-      { src: 'images/projects/Renders/Interior/Dance studio/Studio R1.png', label: 'Dance Studio' },
-      { src: 'images/projects/Renders/Interior/Dance studio/Studio R2.png', label: 'Dance Studio' },
-      { src: 'images/projects/Renders/Interior/Dance studio/Studio R4.png', label: 'Dance Studio' },
-      { src: 'images/projects/Renders/Interior/Dance studio/Studio R5.png', label: 'Dance Studio' },
-      // Interior — Gym
-      { src: 'images/projects/Renders/Interior/Gym/Gym R1.png',             label: 'Gym' },
-      { src: 'images/projects/Renders/Interior/Gym/Gym R2.png',             label: 'Gym' },
-      { src: 'images/projects/Renders/Interior/Gym/Gym R3.png',             label: 'Gym' },
-      { src: 'images/projects/Renders/Interior/Gym/Gym R4.png',             label: 'Gym' },
-      { src: 'images/projects/Renders/Interior/Gym/Gym R6.png',             label: 'Gym' },
-      { src: 'images/projects/Renders/Interior/Gym/Gym R7.png',             label: 'Gym' },
-      // Interior — Living Area
-      { src: 'images/projects/Renders/Interior/Living area/R1.png',         label: 'Living' },
-      { src: 'images/projects/Renders/Interior/Living area/R2.png',         label: 'Living' },
-      // Interior — Office
-      { src: 'images/projects/Renders/Interior/Office/BR R1.png',           label: 'Office' },
-      { src: 'images/projects/Renders/Interior/Office/BR R2.png',           label: 'Office' },
-      { src: 'images/projects/Renders/Interior/Office/L1 R1.png',           label: 'Office' },
-      { src: 'images/projects/Renders/Interior/Office/L1 R2.png',           label: 'Office' },
-      { src: 'images/projects/Renders/Interior/Office/L1 R3.png',           label: 'Office' },
-    ]
-  },
-
 ];
+

@@ -58,14 +58,14 @@ const TESTIMONIALS = [
     year: "2024"
   },
   {
-    id: 'rinku-goyal-commercial',
-    quote: "Their architectural facade engineering and commercial spatial zoning maximized both functional tenant value and aesthetic street prominence. A reliable practice with immense technical discipline.",
-    clientName: "Commercial Complex Developer",
-    role: "Project Director",
-    projectTitle: "Commercial Complex",
-    location: "Bhiwadi, NCR",
-    category: "Commercial",
-    projectId: "rinku-goyal-commercial",
+    id: 'naveen-residence',
+    quote: "Their architectural facade engineering and residential landscape design created a home that feels peaceful, open, and visually stunning from every vantage point. A reliable practice with immense technical discipline.",
+    clientName: "Naveen & Family",
+    role: "Homeowner",
+    projectTitle: "Naveen Residence",
+    location: "Gurgaon, NCR",
+    category: "Residential",
+    projectId: "naveen-residence",
     year: "2024"
   },
   {
